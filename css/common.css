@@ -1,0 +1,154 @@
+@import url(normalize.css);
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@500;600;800&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --body-ff:'pretendard', sans-serif;
+    --title-ff:'Montserrat', sans-serif;
+    --body-fz:18px;
+    --title-fz:48px;
+    --line-height:27px;
+    --primary-c :#3b3530;
+    --secondary-c :#7f7267;
+    --secondary-bg:#f3efeb;
+    --white : #fff;
+    --con-width : 1120px;   
+}
+.material-symbols-outlined{
+    font-weight: 400;
+}
+
+body{
+    line-height: var(--line-height);
+}
+.main_tt{
+    font-family: var(--title-ff);
+    font-size: var(--title-fz);
+    color: var(--primary-c);
+    line-height: calc(var(--line-height)*2);
+}
+.vh{
+    height:100vh;
+}
+.container{
+    width: var(--con-width);
+    margin:0 auto;
+}
+
+/* ====================== menu ====================== */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    gap:30px;
+}
+.menu li a,.material-symbols-outlined{
+    color:#fff;
+}
+.material-symbols-outlined{
+    display: inline-block;
+    line-height: var(--line-height);
+}
+
+header{
+    position:absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: calc(var(--line-height)*4);
+    align-items: center;
+    padding: 0 50px;
+}
+.logo a{
+    width:165px;
+    height: 45px;
+    background:url(../images/MainLogo.png) no-repeat;
+    display: inline-block;
+    text-indent: -9999em;
+    margin: auto 0;
+}
+
+/* ====================== footer ====================== */
+footer{
+    
+    background-color: var(--primary-c);
+    color:#fff;
+    position:relative;
+}
+
+.footer_top,.footer_main,.footer_bottom ul{
+    display: flex;
+}
+.brand_logo ul{
+    display: flex;
+    gap: 40px;
+}
+
+.footer_top{
+    height: calc(var(--line-height)*3);
+    justify-content: space-between;
+    align-items: center;
+    padding:auto 0;  
+    
+}
+.footer_top::after{
+    content:'';
+    position:absolute;
+    height: 1px;
+    background-color:rgba(255,255,255,.5);
+    top: calc(var(--line-height)*3);;
+    left: 0;right: 0;
+}
+.brand_logo li:first-child img,li:nth-child(2) img{
+    height: 30px;
+}
+.brand_logo li:nth-child(3) img,li:nth-child(4) img{
+    height: 13px;
+}
+.footer_top .sns ul{
+    display: flex;
+    gap:20px;
+}
+.footer_main{
+    justify-content: space-between;
+}
+.footer_left img{
+    margin:var(--line-height) 0;
+    height: calc(var(--line-height)*3);
+}
+.footer_left .info{
+    font-size: 14px;
+}
+.footer_right{
+    display: flex;
+    flex-direction: column;
+    padding-top:calc(var(--line-height)*3)
+}
+.footer_right .link{
+    display: flex;
+    gap:30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer_right .link li{
+    position:relative;
+}
+.footer_right .link li:nth-child(-n+4)::after{
+    content: '';
+    position:absolute;
+    width: 2px;
+    background-color: #fff;
+    left: calc(100% + 15px);
+    top: 0;bottom: 0;
+}
+.footer_bottom ul{  
+    gap:50px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: var(--line-height) 0;
+    border-top: 1px solid rgba(255,255,255,.5);
+}
