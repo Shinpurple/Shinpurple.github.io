@@ -2,13 +2,14 @@
 
 
 /* ==================== mainSlide ==================== */
-.main_slide{
-    background-color: antiquewhite;
+.s_01_main{
     height: 100vh;
+    position:relative;
 }
 .main_slide{
     overflow: hidden;
-    position:relative;
+    position:absolute;
+    right: 0;left: 0;top: 0;bottom: 0;
 }
 .slide_container{
     height: 100%;
@@ -78,4 +79,98 @@
 }
 .controls .next{
     margin-left: 600px;
+}
+
+.reservation{
+    background-color: var(--secondary-bg);
+    position:absolute;
+    bottom: 0;
+    left: 0;right: 0;
+    z-index: 2;
+}
+.reservation .container{
+    display: flex;
+    justify-content: space-between;
+    padding:var(--line-height) 0;
+}
+.reservation .container h2{
+    font-size: 30px;   
+}
+.reservation .container ul{
+    display: flex;
+    gap:50px;
+}
+.reservation .container ul li a{
+    font-size: 24px;
+}
+
+/* ==================== 02 MEET OUR HOTEL ==================== */
+/*
+.s_02_hotels .content{
+    height: calc(var(--line-height)*29);
+    margin-top:calc(var(--line-height)*5);
+    background-image:url(../images/hotel_seoul.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hotel_list li{
+    opacity: 0;
+}
+.hotel_list li.active{
+    opacity: 1;
+}
+.s_02_hotels h2{
+    color:#fff;
+    padding:calc(var(--line-height)*3) 0;
+}
+*/
+
+.tab_wrapper{
+    height: calc(var(--line-height)*29);
+    margin-top:calc(var(--line-height)*5);
+    background-image:url(../images/hotel_seoul.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.s_02_hotels h2{
+    color:#fff;
+    padding:calc(var(--line-height)*3) 0;
+}
+.hover_menu{
+    display: flex;
+    justify-content: space-between;
+    /* codepen */
+    padding-left: 0;
+    position:relative;
+    z-index: 11;
+    
+}
+/* codepen */
+.hover_menu li a {
+    display: block;
+}
+.hover_menu li a img{
+    height: 54px;
+    position:relative;
+}
+.hover_menu li{
+    line-height: calc(var(--line-height)*3);
+}
+#hotel_content h3,p,span{
+    color:#fff;
+}
+.hotelLogo{
+    position:relative;
+}
+.highlight{
+    position:absolute;
+    width: 100px;
+    height: 2px;
+    left: 0;bottom: 0;
+    background-color: #fff;
+}
+#hotel_content >div{
+    display: none;
 }

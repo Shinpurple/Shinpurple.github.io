@@ -13,7 +13,7 @@
     --secondary-c :#7f7267;
     --secondary-bg:#f3efeb;
     --white : #fff;
-    --con-width : 1120px;   
+    --con-width : 1320px;   
 }
 .material-symbols-outlined{
     font-weight: 400;
@@ -27,6 +27,7 @@ body{
     font-size: var(--title-fz);
     color: var(--primary-c);
     line-height: calc(var(--line-height)*2);
+    text-transform: uppercase;
 }
 .vh{
     height:100vh;
@@ -36,9 +37,14 @@ body{
     margin:0 auto;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /* ====================== menu ====================== */
 .menu{
     display: flex;
+    height: calc(var(--line-height)*4);
     justify-content: space-between;
     align-items: center;
 }
@@ -58,8 +64,7 @@ header{
     position:absolute;
     z-index: 1;
     left: 0;
-    right: 0;
-    height: calc(var(--line-height)*4);
+    right: 0;  
     align-items: center;
     padding: 0 50px;
 }
