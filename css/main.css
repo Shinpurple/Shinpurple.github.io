@@ -74,10 +74,10 @@
     transform: translate(-50%,-50%);
     font-size: 48px;
 }
-.controls .prev{
+.main_slide .controls .prev{
     margin-left: -600px;
 }
-.controls .next{
+.main_slide .controls .next{
     margin-left: 600px;
 }
 
@@ -103,6 +103,7 @@
 .reservation .container ul li a{
     font-size: 24px;
 }
+
 
 /* ==================== 02 MEET OUR HOTEL ==================== */
 /*
@@ -133,6 +134,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position:relative;
+    z-index: 0;
+}
+.tab_wrapper:after{
+    content:'';
+    position:absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    background:rgba(0,0,0,.5);
+    z-index: -1;
+}
+.s_02_hotels .container>*{
+    z-index:1;
 }
 .s_02_hotels h2{
     color:#fff;
@@ -143,9 +156,7 @@
     justify-content: space-between;
     /* codepen */
     padding-left: 0;
-    position:relative;
-    z-index: 11;
-    
+    position:relative;    
 }
 /* codepen */
 .hover_menu li a {
@@ -158,7 +169,9 @@
 .hover_menu li{
     line-height: calc(var(--line-height)*3);
 }
-#hotel_content h3,p,span{
+#hotel_content h3,
+#hotel_content p,
+#hotel_content span{
     color:#fff;
 }
 .hotelLogo{
@@ -166,11 +179,195 @@
 }
 .highlight{
     position:absolute;
-    width: 100px;
+    /* width: 100px; */
     height: 2px;
     left: 0;bottom: 0;
     background-color: #fff;
 }
+
 #hotel_content >div{
     display: none;
+}
+#hotel_content >div h3{
+    font-family: var(--title-ff);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin:var(--line-height) 0;
+}
+#hotel_content >div p{
+    width: 700px;
+}
+#hotel_content >*{
+    text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+}
+.view_more{
+    font-family: var(--title-ff);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 34px;
+    width: 127px;
+    display: inline-block;
+    text-align: center;
+    border:2px solid #fff;
+}
+#hotel_content .view_more{
+    margin-top: var(--line-height);
+    transition: .3s;
+}
+#hotel_content .view_more:hover{
+    background-color:#fff;
+    color:var(--primary-c);
+}
+/* ==================== 03 SPECIAL OFFER ==================== */
+.s_03_offer{
+    min-height: calc(var(--line-height)*30);
+    
+}
+.slide_container{
+    display: flex;
+    justify-content: space-between;
+}
+.s_03_offer h2{
+    padding:calc(var(--line-height)*3) 0;
+}
+.s_03_offer .slide_wrapper{
+    position:relative;
+}
+.slide_container .photo{
+    position:relative;
+}
+.slide_container .photo:before{
+    content: '';
+    position:absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    background: rgba(0,0,0,.6);
+    opacity:0;
+    transition:.3s;
+}
+.slide_container li:hover .photo:before{
+    opacity:1;
+}
+.slide_container li:hover .photo>span{
+    opacity:1;
+}
+.slide_container .photo>span{
+    position:absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    opacity: 0;
+    transition:.3s;
+}
+.slide_container .caption h3,
+.slide_container .caption p,
+.slide_container .caption span{
+    color:var(--primary-c);
+}
+
+.slide_container .caption h3{
+    font-family: var(--title-ff);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(var(--line-height)*3);
+}
+.slide_container .caption span{
+    font-family: var(--title-ff);
+    font-size: 16px;
+    display: block;
+
+}
+.slide_container .caption span.hotel{
+    color:#fff;
+    display: inline-block;
+    line-height: 30px;
+    width: 130px;
+    text-align: center;
+    margin-top:var(--line-height);
+}
+.slide_container .caption span.seoul{
+    background-color: var(--primary-c);
+}
+.slide_container .caption span.jeju{
+    background-color: var(--secondary-c);
+}
+.slide_container .caption span.stay{
+    background-color: #9e9993;
+}
+
+.s_03_offer .controls a{
+    color:var(--primary-c);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    transform: scale(3);
+    display: inline-block;
+    font-weight: 100;
+}
+.s_03_offer .controls a.prev{
+    margin-left: -750px;
+}
+.s_03_offer .controls a.next{
+    margin-left: 750px;
+}
+/* ==================== 04 SHILLA REWARDS ==================== */
+.s_04_rewards{
+    background-image: url(../images/rewards_BG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.s_04_rewards .content{
+    position:relative;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.s_04_rewards .content:before{
+    content:'';
+    background:rgba(255,255,255,.9);
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: -10%;
+    left: -10%;
+    z-index: -1;
+    
+}
+.s_04_rewards h2{
+    padding: calc(var(--line-height)*6) 0 calc(var(--line-height)*3) 0;
+}
+.s_04_rewards .content>p{
+    padding-bottom: calc(var(--line-height)*2);
+}
+.s_04_rewards .content ul{
+    display: flex;
+    gap:60px;
+    color:var(--secondary-c);
+}
+.s_04_rewards .content strong{
+    font-weight: 600;
+}
+.s_04_rewards .content ul li{
+    position:relative;
+}
+.s_04_rewards .content ul li:nth-child(-n+2):after{
+    content:'';
+    position:absolute;
+    top: 0; bottom: 0;
+    left: calc(100% + 30px);
+    width: 3px;
+    color:var(--secondary-c);
+    z-index: 2;
+}
+.s_04_rewards .content .view_more{
+    width: 194px;
+    margin:calc(var(--line-height)*2) 0 calc(var(--line-height)*6) 0;
+    color:var(--primary-c);
+    border:2px solid var(--primary-c);
+    transition:.3s;
+}
+.s_04_rewards .content .view_more:hover{
+    width: 194px;
+    background-color:var(--primary-c);
+    color:#fff;
 }
