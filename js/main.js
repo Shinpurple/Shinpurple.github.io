@@ -1,5 +1,12 @@
     /* ===================== MAIN SLIDE ===================== */
     $('.main_slide').bxSlider();
+    $('.multi_slide').bxSlider({
+        minSlides:1,
+        maxSlides:3,
+        moveSlides:3,
+        slideWidth:420,
+        slideMargin:30
+    });
     
     
     
