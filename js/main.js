@@ -1,3 +1,9 @@
+$('#fullpage').fullpage({
+    //options here
+    autoScrolling:true,
+    scrollHorizontally: true
+});
+    
     /* ===================== MAIN SLIDE ===================== */
     $('.main_slide').bxSlider();
     $('.multi_slide').bxSlider({

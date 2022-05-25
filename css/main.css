@@ -1,6 +1,8 @@
 @import url(common.css);
 
-
+body,html{
+    height: 100%;
+}
 /* ==================== mainSlide ==================== */
 .s_01_main{
     height: 100vh;
@@ -137,7 +139,7 @@
 
 .tab_wrapper{
     height: calc(var(--line-height)*29);
-    margin-top:calc(var(--line-height)*5);
+    margin:auto 0;
     background-image:url(../images/hotel_seoul.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -232,16 +234,14 @@
     text-align: right;
 }
 /* ==================== 03 SPECIAL OFFER ==================== */
-.s_03_offer{
-    min-height: calc(var(--line-height)*30);
-    
+
+
+.s_03_offer>div{
+    margin:auto 0;
 }
-/* .slide_container{
-    display: flex;
-    justify-content: space-between;
-} */
+
 .s_03_offer h2{
-    padding:calc(var(--line-height)*3) 0;
+    padding:calc(var(--line-height)*2) 0;
 }
 .s_03_offer .slide{
     position:relative;
@@ -368,8 +368,7 @@
 .s_04_rewards .content{
     position:relative;
     z-index: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    margin:auto;
 }
 .s_04_rewards .content:before{
     content:'';
@@ -406,7 +405,7 @@
     left: calc(100% + 30px);
     width: 3px;
     color:var(--secondary-c);
-    z-index: 2;
+    z-index: 10;
 }
 .s_04_rewards .content .view_more{
     width: 194px;
@@ -425,7 +424,7 @@
 
 .s_05_newsLetter form{
     background-color: var(--secondary-bg);
-    margin: 100px 0;
+    margin: auto;
     padding:100px 90px;
 }
 .s_05_newsLetter fieldset{
@@ -480,4 +479,5 @@
 .input_wrapper p a:hover{
  font-weight: 600;
 }
+
 
