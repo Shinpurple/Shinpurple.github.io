@@ -260,7 +260,7 @@ body,html{
 .slide .photo:hover:before{
     opacity:1;
 }
-.slide .photo:hover .photo>a{
+.slide .photo:hover >a{
     opacity:1;
 }
 .slide .photo>a{
