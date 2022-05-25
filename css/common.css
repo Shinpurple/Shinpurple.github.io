@@ -61,6 +61,7 @@ img{
 }
 .material-symbols-outlined{
     display: inline-block;
+    vertical-align: top;
 }
 
 header{
@@ -126,7 +127,6 @@ footer{
 }
 .footer_left img{
     margin:var(--line-height) 0;
-    height: calc(var(--line-height)*3);
 }
 .footer_left .info{
     font-size: 14px;
