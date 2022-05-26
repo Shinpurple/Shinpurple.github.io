@@ -22,6 +22,7 @@
 body{
     font-size: var(--body-fz) ;
     line-height: var(--line-height);
+    color:var(--primary-c);
 }
 .main_tt{
     font-family: var(--title-ff);
@@ -150,9 +151,18 @@ footer{
     content: '';
     position:absolute;
     width: 2px;
+    height: 16px;
     background-color: #fff;
     left: calc(100% + 15px);
-    top: 0;bottom: 0;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.footer_right .contact{
+    display: flex;
+    width:450px;
+    gap:30px;
+    margin-top:var(--line-height);
 }
 .footer_bottom ul{  
     gap:50px;

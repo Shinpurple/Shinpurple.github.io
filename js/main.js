@@ -33,7 +33,7 @@ $('#fullpage').fullpage({
 
             highlight.animate({left:newLeft,width:newWidth},300);
             contentLeft.css({left:newLeft});
-            
+        
         });
 
         function activeTab(num){
