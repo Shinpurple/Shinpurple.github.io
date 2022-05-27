@@ -40,13 +40,13 @@
         <div class="login container">
             <h2 class="main_tt">log in</h2>
             <p>신라리워즈에 오신 것을 환영합니다.</p>
-            <div class="tab_menu">
+            <div class="login_menu">
                 <ul>
                     <li><a href="#member">회원</a></li>
                     <li><a href="#nonmember">비회원</a></li>
                 </ul>
             </div>
-            <div id="tab_content">
+            <div id="login_content">
                 <div id="member">
                     <em>신라리워즈 번호와 비밀번호를 입력해주시기 바랍니다. </em>
                     <p>신라리워즈 회원이 되시면 다양한 서비스와 혜택을 받으실 수 있습니다. </p>
@@ -59,9 +59,12 @@
                             <label for="user_pw" class="hidden">password</label>
                             <input type="password" placeholder="비밀번호 입력" id="user_pw" name="password">
                         </p>
-                        <p>
+                        
+                            <input type="checkbox" id="rememberId">
+                            <label for="rememberId">아이디 저장</label>
+                        
+                        <p class="input">
                             <input type="submit" value="로그인">
-
                         </p>
                     </form>
                     <ul class="find">
@@ -79,7 +82,34 @@
                             </a></li>
                     </ul>
                 </div>
-                <div id="nonmember"></div>
+                <div id="nonmember">
+                    <p class="select">
+                        <label for="room">객실</label>
+                        <input type="radio" name="choose" value="객실" checked>
+                        <label for="dining">다이닝</label>
+                        <input type="radio" name="choose" value="다이닝">
+                    </p>
+                    <form action="#" method="post">
+                        <p class="input">
+                            <label for="reservation_num" class="hidden">예약번호</label>
+                            <input type="text" placeholder="예약번호" id="reservation_num" name="reservation_num">
+                        </p>
+                        <p class="input">
+                            <label for="firstname" class="hidden">이름</label>
+                            <input type="text" placeholder="FIRST NAME (이름)" id="firstname" name="firstname">
+                            <label for="lastname" class="hidden">성</label>
+                            <input type="text" placeholder="LAST NAME (성)" id="lastname" name="lastname">
+                        </p>
+                        <p class="input">
+                            <input type="submit" value="로그인">
+                        </p>
+                    </form>
+                    <div class="join">
+                        <p>신라리워즈 회원이 되시면 다양한 서비스와 혜택을 받으실 수 있습니다. </p>
+                        <a href="#">신라리워즈 가입<span class="material-symbols-outlined">
+                            chevron_right</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -141,5 +171,7 @@
             </div>
         </div>
     </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="js/login.js"></script>
 </body>
 </html>

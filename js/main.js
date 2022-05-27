@@ -21,7 +21,7 @@ $('#fullpage').fullpage({
         highlight = $('.highlight'),
         hotelContent = $('#hotel_content>div'),
         contentLeft = $('#hotel_content>div:nth-child(-n+3)'),
-        hotelBg = $('.tab_menu li a')
+        hotelBg = $('.tab_wrapper')
       
         hotelLogo.click(function(e){
             e.preventDefault();
@@ -33,14 +33,16 @@ $('#fullpage').fullpage({
 
             highlight.animate({left:newLeft,width:newWidth},300);
             contentLeft.css({left:newLeft});
-        
+            let newBg = $(this).find('a').attr('data-bg');
+            hotelBg.css({backgroundImage:'url('+ newBg +')'});
         });
 
         function activeTab(num){
             hotelContent.hide();
             hotelContent.eq(num).fadeIn();
         }
-        activeTab(0);
+        
+        hotelLogo.eq(0).trigger("click");
     
 
 

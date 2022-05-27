@@ -4,7 +4,10 @@ body,html{
     height: 100%;
 }
 .fp-slides{
-    overflow:auto;
+    overflow:initial;
+}
+.fp-warning,.fp-watermark{
+    display: none;
 }
 /* ==================== mainSlide ==================== */
 .s_01_main{
@@ -143,12 +146,17 @@ body,html{
 .tab_wrapper{
     height: calc(var(--line-height)*29);
     margin:auto 0;
-    background-image:url(../images/hotel_seoul.jpg);
+    /* background-image:url(../images/hotel_seoul.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position:relative;
     z-index: 0;
+}
+#hotel_content{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .tab_wrapper .container{
     position: relative;
@@ -238,11 +246,24 @@ body,html{
     right: 0;
     text-align: right;
 }
+#hotel1{
+    background-image: url(../images/hotel_seoul.jpg);
+}
+#hotel2{
+    background-image: url(../images/hotel_jeju.jpg);
+}
+#hotel3{
+    background-image: url(../images/hotel_monogram.jpg);
+}
+#hotel4{
+    background-image: url(../images/hotel_stay.jpg);
+}
 /* ==================== 03 SPECIAL OFFER ==================== */
 
 
 .s_03_offer>div{
-    margin:auto 0;
+    height: 100%;
+    padding:auto 0;
 }
 
 .s_03_offer h2{

@@ -2,24 +2,49 @@
 
 main{
     height:100vh;
-    /* position:relative; */
-    /* padding: auto 0; */
-    
 }
-#tab_content{
+.login >p{
+    margin-bottom: calc(var(--line-height)*2);
+}
+#login_content{
     background-color: var(--secondary-bg);    
-    height: 542px;
+    /* padding: calc(var(--line-height)*3) 0; */
+    /* height: 540px; */
 }
 main h2{
     padding: calc(var(--line-height)*7) 0 var(--line-height) 0;
 }
-
-#tab_content #member{
-    height: 100%;
+.login_menu ul{
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+.login_menu li{
+    font-size: 24px;
+    display: inline-block;
+    background-color: #fff;
+    height:calc(var(--line-height)*3);
+    width: 50%;
+    text-align: center;
+    line-height: calc(var(--line-height)*3);
+    font-weight: 500;
+    opacity: .7;
+}
+.login_menu li.active{
+    background-color: var(--secondary-bg);
+    opacity: 1;
+}
+input{
+    accent-color: var(--primary-c);
+}
+/* ========================= CONTENT ========================= */
+#login_content #member,#nonmember{
+    height: 540px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     align-content: center;
+    padding-top: 100px;
 }
 #member em{
     font-weight: 600;
@@ -34,23 +59,47 @@ main h2{
     gap:30px;
     margin-top:var(--line-height);
 }
-.hidden {
-    position: fixed;
-    left: 0px;
-    top: -9999em;
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
+.find a:hover,.join a:hover{
+    font-weight: 600;
 }
-form p{
+.hidden {
+    display: none;
+}
+form p.input{
     width: 700px;
     height: calc(var(--line-height)*2);
-    margin: 15px auto;
-    background:#fff;
-    border-radius: 10px;
+    margin: 20px auto;
 }
 form p input{
     width: 100%;
     line-height: calc(var(--line-height)*2);
     box-sizing: border-box;
+    outline: none;
+    border:1px solid rgba(0,0,0,.1);
+    padding:0 1rem;
+}
+p.input:last-child input{
+    border:0;
+    background:var(--primary-c);
+    opacity: .9;
+    color:#fff;
+    transition:.3s;
+}
+p.input:last-child input:hover{
+    opacity: 1;
+}
+#nonmember p.input:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+#nonmember p.input:nth-child(2) input{
+    width:343px;
+}
+
+.join{
+    display: flex;
+    gap:10px;
+}
+.join p{
+    opacity: .7;
 }
