@@ -1,0 +1,146 @@
+@import url(common.css);
+
+body,html{
+    height: 100%;
+}
+.fp-slides{
+    overflow:initial;
+}
+.fp-warning,.fp-watermark{
+    display: none;
+}
+.section{
+    height: calc(100vh - (var(--line-height)*4));
+}
+
+/* ====================== section1 ====================== */
+.s_01{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+   
+}
+.left{
+    height: 100vh;
+    width: 30%;   
+}
+.left .bg{
+    background-color: var(--primary-c);
+    height: 10% ;
+}
+.right{
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.right .bg{
+    background-image:url(../images/hotel_seoul_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+}
+/* ====================== section2 ====================== */
+.s_02 .img{
+    background-image: url(../images/hotel_seoul_02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:75%;
+    position:relative;
+    z-index: 0;
+    display: block;
+}
+.s_02 .img:after{
+    content:'';
+    position:absolute;
+    top: 0;bottom: 0;right: 0;left: 0;
+    background:rgba(0,0,0,.5);
+    z-index: -1;
+}
+.s_02 h2{
+    color:#fff;
+    position:absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
+div.text{
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+/* ====================== section3 ====================== */
+.s_03 .bg{
+    width:60%;
+    height:730px;
+    background: var(--primary-c);
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+.s_03 .bg h2{
+    color:#fff;
+    margin-top:calc(var(--line-height)*4);
+    margin-left: 147px;
+}
+.bx-wrapper{
+    margin:0 auto 100px ;
+    padding-top:200px;
+}
+
+
+.hotel_slide .content{
+    display: flex;
+    position:relative;
+}
+.hotel_slide .content .dsc{
+    position:absolute;
+    top:calc(var(--line-height)*2);
+    left: 650px;
+    color:#fff;
+}
+.hotel_slide .content .dsc em{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom:var(--line-height);
+}
+.bx-controls{
+    display: flex;
+    flex-direction: row-reverse;
+    gap:20px;
+}
+.bx-pager{
+    display: flex;
+}
+.bx-pager-item{
+    display: inline-block;
+    line-height: 27px;
+}
+.bx-pager-item a{
+    display: inline-block;
+    height: 2px;
+    width: 100px;
+    background:var(--primary-c);
+    opacity: .3;
+    text-indent: -9999em;
+    transition:.4s;
+    margin-top:11px;
+}
+.bx-pager-item a.active{
+    opacity: 1;
+}
+.bx-controls-direction a{
+    width: 24px;
+    height: 24px;
+    background:no-repeat 0 0 /100% 100%;
+    display: inline-block;
+    text-indent: -999em;
+    opacity: .5;
+}
+.bx-controls .bx-prev{
+    background-image: url(../images/prev_black.svg);
+}
+.bx-controls .bx-next{
+    background-image: url(../images/next_black.svg);
+}

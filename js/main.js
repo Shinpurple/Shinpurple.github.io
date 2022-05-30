@@ -3,7 +3,31 @@ $('#fullpage').fullpage({
     autoScrolling:true,
     scrollHorizontally: true
 });
-    
+     /* ======================== MENU ======================== */
+    // window.scroll(function(){
+    //     let winSCT = $(this).scrollTop(); 
+
+    //     // if(winSCT == $('.menu_dark').offset().top){
+    //     //     header.addClass('dark');
+    //     // }else{
+    //     //     header.removeClass('dark');
+    //     // }
+    //     if(winSCT > $(".section:eq(2)").offset().top){
+    //         header.addClass('dark');
+    //     }
+    // });
+
+    // console.log(winSCT);
+    // console.log($(".section:eq(2)").offset().top);
+    // console.log($(".section:eq(3)").offset().top);
+    // console.log($(".section:eq(4)").offset().top);
+    $(window).scroll(function(){
+        let winSCT = $(this).scrollTop();
+        if(winSCT > $('.section:eq(2)').offset().top){
+            $('header').addClass('dark');
+        }
+    });
+     
     /* ===================== MAIN SLIDE ===================== */
     $('.main_slide').bxSlider();
     $('.multi_slide').bxSlider({
@@ -12,6 +36,10 @@ $('#fullpage').fullpage({
         moveSlides:3,
         slideWidth:420,
         slideMargin:30
+    });
+    $('.hotel_slide').bxSlider({
+        // mode:'fade',
+        slideWidth:1320
     });
     
     
