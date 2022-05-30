@@ -1,34 +1,24 @@
 $('#fullpage').fullpage({
     //options here
     autoScrolling:true,
-    scrollHorizontally: true
+    scrollHorizontally: true,
+    afterLoad: function(origin, destination, direction, trigger){
+		var origin = this;
+
+        console.log(destination.index);
+
+	
+        if(destination.index != 0 && destination.index != 3){
+            $('header').addClass('dark');
+        } else{
+            $('header').removeClass('dark'); 
+        }
+		
+	}  
 });
      /* ======================== MENU ======================== */
-    // window.scroll(function(){
-    //     let winSCT = $(this).scrollTop(); 
-
-    //     // if(winSCT == $('.menu_dark').offset().top){
-    //     //     header.addClass('dark');
-    //     // }else{
-    //     //     header.removeClass('dark');
-    //     // }
-    //     if(winSCT > $(".section:eq(2)").offset().top){
-    //         header.addClass('dark');
-    //     }
-    // });
-
-    // console.log(winSCT);
-    // console.log($(".section:eq(2)").offset().top);
-    // console.log($(".section:eq(3)").offset().top);
-    // console.log($(".section:eq(4)").offset().top);
-    $(window).scroll(function(){
-        let winSCT = $(this).scrollTop();
-        if(winSCT > $('.section:eq(2)').offset().top){
-            $('header').addClass('dark');
-        }
-    });
-     
-    /* ===================== MAIN SLIDE ===================== */
+  
+    /* ===================== BX SLIDER ===================== */
     $('.main_slide').bxSlider();
     $('.multi_slide').bxSlider({
         minSlides:1,
@@ -41,8 +31,6 @@ $('#fullpage').fullpage({
         // mode:'fade',
         slideWidth:1320
     });
-    
-    
     
     /* ===================== MEET OUR HOTEL ===================== */
     let hotelLogo = $('.tab_menu li'),
