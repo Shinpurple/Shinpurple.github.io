@@ -31,6 +31,7 @@ body,html{
     justify-content: center;
     align-items: center;
     z-index: 0;
+   
 }
 
 .main_slide >div:after{
@@ -259,12 +260,12 @@ body,html{
     background-image: url(../images/hotel_stay.jpg);
 }
 /* ==================== 03 SPECIAL OFFER ==================== */
-
-
-.s_03_offer>div{
-    height: 100%;
-    padding:auto 0;
+.s_03_offer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
+
 
 .s_03_offer h2{
     padding:calc(var(--line-height)*2) 0;
@@ -335,6 +336,12 @@ body,html{
 }
 .slide .caption span.stay{
     background-color: #9e9993;
+}
+.slide .caption span.all{
+    width:80px;
+    background-color: var(--secondary-bg);
+    color:var(--primary-c);
+    font-weight: 800;
 }
 .s_03_offer .slide_wrapper{
     position:relative;
@@ -488,6 +495,7 @@ body,html{
     color:var(--primary-c);
     border-style: none;
     font-size: 20px;
+    outline: none;
 }
 .s_05_newsLetter fieldset button{
     width: 150px;
