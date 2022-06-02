@@ -151,19 +151,20 @@ header.dark .menu .material-symbols-outlined{
 .allMenu{
     position:absolute;
     left: 0;
-    /* bottom:100%; */
-    top: calc(var(--line-height)*4);
+    bottom:100%;
+    /* top: calc(var(--line-height)*4); */
     width: 100%;
     background-color: var(--primary-c);
     height: 100vh;
     color:#fff;
     box-shadow: inset 0px 0px 35px -5px rgba(0,0,0,0.35);
-    opacity: 1;
+    display: none;
     transition:.5s;
 }
 .allMenu.open{
     /* top: calc(var(--line-height)*4); */
-    opacity: 1;
+    bottom: 0;
+    /* display: block; */
     transition:.5s;
 }
 .allMenu>ul{

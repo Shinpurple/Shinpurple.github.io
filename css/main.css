@@ -139,6 +139,12 @@ body,html{
 }
 .reservation .container ul li a{
     font-size: 24px;
+    font-weight: 200;
+    opacity: .7;
+}
+.reservation .container ul li:hover a{
+    font-weight: 800;
+    opacity: 1;
 }
 
 
