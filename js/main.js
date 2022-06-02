@@ -17,6 +17,12 @@ $('#fullpage').fullpage({
 	}  
 });
      /* ======================== MENU ======================== */
+     $('.hamburger_btn').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('header').toggleClass('dark');
+        // $('.allMenu').toggleClass('open');
+     })
   
     /* ===================== BX SLIDER ===================== */
     $('.main_slide').bxSlider();
