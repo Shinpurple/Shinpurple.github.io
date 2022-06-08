@@ -124,6 +124,7 @@ body,html{
     bottom: 0;
     left: 0;right: 0;
     z-index: 2;
+    overflow: hidden;
 }
 .reservation .container{
     display: flex;
@@ -145,6 +146,24 @@ body,html{
 .reservation .container ul li:hover a{
     font-weight: 800;
     opacity: 1;
+}
+
+#form_content >div{
+    position:fixed;
+    left: 0;right: 0;
+    /* bottom:10vh; */
+    
+    background-color: pink;
+    height: 80vh;
+    color:#fff;
+    transform: translateY(100%);
+    transition:.5s;
+    z-index: -5;
+}
+#form_content>div.up{
+    transform: none;
+    transition:.5s;
+    bottom:108px;
 }
 
 

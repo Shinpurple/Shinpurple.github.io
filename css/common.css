@@ -1,6 +1,6 @@
 @import url(normalize.css);
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@500;600;800&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
@@ -149,23 +149,22 @@ header.dark .menu .material-symbols-outlined{
 /* --------all menu-------- */
 
 .allMenu{
-    position:absolute;
+    position:fixed;
     left: 0;
-    bottom:100%;
-    /* top: calc(var(--line-height)*4); */
+    top: 0;
     width: 100%;
     background-color: var(--primary-c);
     height: 100vh;
     color:#fff;
     box-shadow: inset 0px 0px 35px -5px rgba(0,0,0,0.35);
-    display: none;
+    transform: translateY(-100%);
     transition:.5s;
+    z-index: -1;
 }
 .allMenu.open{
-    /* top: calc(var(--line-height)*4); */
-    bottom: 0;
-    /* display: block; */
+    transform: none;
     transition:.5s;
+    top:108px;
 }
 .allMenu>ul{
     height: 100%;

@@ -21,8 +21,8 @@ $('#fullpage').fullpage({
         e.preventDefault();
         $(this).toggleClass('active');
         $('header').toggleClass('dark');
-        // $('.allMenu').toggleClass('open');
-     })
+        $('.allMenu').toggleClass('open');
+     });
   
     /* ===================== BX SLIDER ===================== */
     $('.main_slide').bxSlider();
@@ -38,6 +38,19 @@ $('#fullpage').fullpage({
         slideWidth:1320
     });
     
+    /* ===================== RESERVATION ===================== */
+    let rsv_Menu = $('.form_menu a'),
+        rsv_content = $('#form_content>div')
+
+        rsv_Menu.on('click',function(e){
+            e.preventDefault();
+            let targetIdx = $(this).index();
+            activeTab(targetIdx);
+        });
+        function activeTab(num){
+            rsv_content.eq(num).toggleClass('up');
+        }
+
     /* ===================== MEET OUR HOTEL ===================== */
     let hotelLogo = $('.tab_menu li'),
         highlight = $('.highlight'),

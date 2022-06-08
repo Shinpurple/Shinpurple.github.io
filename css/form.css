@@ -1,0 +1,172 @@
+@import url(common.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+/* ============= COMMON ============= */
+.section{
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    color:var(--secondary-c);
+}
+.room{
+    background-color: rgb(163, 157, 135);
+}
+.dining{
+    background-color: rgb(71, 60, 41);
+}
+.membership{
+    background-color: rgb(113, 110, 104);
+}
+
+#form_content{
+    position:absolute;
+    background-color:rgb(255, 255, 255,.9);
+    /* width: 100%; */
+    height: 80vh;
+    bottom:10vh;
+    right: 0;left: 0; 
+    padding: 0 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.form_title{
+    font-family: var(--title-ff);
+    font-size: 24px;
+    color:var(--secondary-c);
+    text-transform: uppercase;
+    line-height: calc(var(--line-height)*2);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: var(--line-height);
+}
+.hover:hover{
+    background-color: var(--secondary-c);
+    color:#fff;
+}
+/* =============== ROOM =============== */
+.select_hotel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.select_hotel>li{
+    border:2px solid var(--secondary-c);
+    width: 24%;
+    line-height: calc(var(--line-height)*2);
+    transition: .3s;
+}
+.select_hotel>li a{
+    display: inline-block;
+    width: 100%;
+}
+/* selectbox */
+.select{
+    position:relative;
+}
+
+.selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.selected-value{
+    display: inline-block;
+    width: 100%;
+}
+.selected .arrow{
+    position:absolute;
+    right:15px;
+    display: inline-block;
+    width: 27px;height: 27px;
+    background:url(../images/open.svg);
+    text-indent: -99999rem;
+    cursor: pointer;
+}
+
+.select-list li:hover{
+    background:var(--secondary-bg);
+}
+
+.select-list{
+    position:absolute;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent var(--secondary-c) var(--secondary-c) var(--secondary-c);
+    left: -2px;right: -2px;
+    cursor: pointer;
+    display: none;
+    
+}
+.select.active .select-list{
+    display: initial;
+}
+.select.active .selected .arrow{
+    background:url(../images/close.svg);
+}
+
+
+/* =============== DINING =============== */
+
+/* ============= MEMBERSHIP ============= */
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin-top:calc(var(--line-height)*3);
+}
+.card_wrapper{
+    width: 270px;
+    height: calc(var(--line-height)*6);
+    border-radius: 10px;
+}
+.card_wrapper h4{
+    margin:auto;
+    color:#fff;
+    text-transform: uppercase;
+    line-height: calc(var(--line-height)*6);
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 1px 1px 8px rgba(141,141,141,0.6);
+    letter-spacing: 2px;
+}
+.brown .card_wrapper{
+    background-image: linear-gradient( to bottom, #8b7e72 0%, #71665c 100%);
+}
+.silver .card_wrapper{
+    background-image: linear-gradient( to bottom, #dbd5ce 0%, #c3bdb8 100%);
+}
+.gold .card_wrapper{
+    background-image: linear-gradient( to bottom, #cfbb8c 0%, #ae9e79 100%);
+}
+.diamond .card_wrapper{
+    background-image: linear-gradient( to bottom, #625951 0%, #3f3834 100%);
+}
+.dsc{
+    text-align: left;
+    margin-top:10px;
+}
+.membership #form_content p{
+    font-weight: 400;
+    margin-top:calc(var(--line-height)*2);
+    font-size: 21px;
+    line-height: 36px;
+}
+.link_btn {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    margin-top:calc(var(--line-height)*2);
+}
+.link_btn li{
+    line-height: calc(var(--line-height)*2);
+    font-weight: 400;
+    font-size: 24px;
+    border:2px solid var(--secondary-c);
+    width: 330px;
+    transition: .3s;
+}
+
+
+
