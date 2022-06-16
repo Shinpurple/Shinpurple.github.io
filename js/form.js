@@ -1,42 +1,59 @@
-// function toggleSelectBox(selectBox) {
-//     selectBox.classList.toggle("active");
-//   }
-//   let selectBoxElements = document.querySelectorAll(".select");
-//   let optionElement = document.querySelectorAll(".select-list li");
+$('#fullpage').fullpage({
+  autoScrolling:true,
+  scrollHorizontally: true
+});
 
-//   function selectOption(optionElement) {
-//     // let selectBox = optionElement.closest(".select");
-//     let selectedElement = selectBoxElements.querySelector(".selected-value");
-//     selectedElement.textContent = optionElement.textContent;
-//   }
-//   selectBoxElements.forEach(selectBoxElement => {
-//     selectBoxElement.addEventListener("click", function (e) {
-//       let targetElement = e.target;
-//       let isOptionElement = targetElement.classList.contains("option");
-  
-//       if (isOptionElement) {
-//         selectOption(targetElement);
-//       }
-  
-//       toggleSelectBox(selectBoxElement);
-//     });
-//   });
+
+/* ================== form ================== */
 
 $('.select').on('click',function(e){
     e.preventDefault();
     $(this).toggleClass('active');
 });
 
-let option=$('.select-list li'),
-    selectedHotel = $('.selected-value');
+
+
+let option=$('.select-list a'),
+    selectedHotel = $('.selected-hotel'),
+    hotelBtn = $('.hotel_btn input');
 
     option.click(function(e){
       e.preventDefault();
-      let targetElement = e.target.val();
-      console.log(targetElement);
-
-      targetElement.appendTo(selectedHotel);
+      let selectedContent = $(this).text();
+      selectedHotel.text(selectedContent);
+      $(selectedHotel).addClass('clicked');
+      deselect();
     });
+    function deselect(){
+      $("input:radio[name='hotel']").prop('checked',false);
+    }
+$('.hotel_btn').on('click',function(e){
+  // $(this).addClass('clicked');
+  $(selectedHotel).removeClass('clicked');
+  activeTab(targetIdx);
+});
 
+
+
+
+let selectDining = $('.select_dining .select-list li'),
+    selectedDining=$('.selected-value'),
+    diningContent = $('#dining_content>div');
+
+selectDining.click(function(e){
+    e.preventDefault();
+    let targetIdx = $(this).index();
+    
+    activeTab(targetIdx);
+
+    let selectedContent = $(this).text();
+    selectedDining.text(selectedContent);
+    
+  });
+
+function activeTab(num){
+  diningContent.removeClass('show');
+  diningContent.eq(num).addClass('show');
+}
 
 
