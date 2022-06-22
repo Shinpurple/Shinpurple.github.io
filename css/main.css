@@ -53,6 +53,7 @@ body,html{
 
 .main_slide h2{
     color:#fff;
+    font-weight: 300;
 }
 .main_slide span{
     width: 296px;
@@ -133,6 +134,7 @@ body,html{
 }
 .reservation .container h2{
     font-size: 30px;   
+    font-weight: 300;
 }
 .reservation .container ul{
     display: flex;
@@ -144,31 +146,18 @@ body,html{
     opacity: .7;
 }
 .reservation .container ul li:hover a{
-    font-weight: 800;
+    font-weight: 400;
     opacity: 1;
 }
 
-#form_content >div{
-    position:fixed;
-    left: 0;right: 0;
-    /* bottom:10vh; */
-    
-    background-color: pink;
-    height: 80vh;
-    color:#fff;
-    transform: translateY(100%);
-    transition:.5s;
-    z-index: -5;
-}
-#form_content>div.up{
-    transform: none;
-    transition:.5s;
-    bottom:108px;
-}
 
 
 /* ==================== 02 MEET OUR HOTEL ==================== */
-
+.s_02_hotels h2{
+    font-size:48px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
 .tab_wrapper{
     height: calc(var(--line-height)*29);
     margin:auto 0;
@@ -337,7 +326,7 @@ body,html{
     line-height: calc(var(--line-height)*3);
 }
 .slide .caption h3:hover{
-    font-weight: 900;
+    font-weight: 500;
 }
 .slide .caption span{
     font-family: var(--title-ff);

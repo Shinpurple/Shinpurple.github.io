@@ -7,11 +7,11 @@
     --body-ff:'pretendard', sans-serif;
     --title-ff:'Montserrat', sans-serif;
     --body-fz:18px;
-    --title-fz:48px;
+    --title-fz:42px;
     --line-height:27px;
     --primary-c :#3b3530;
     --secondary-c :#7f7267;
-    --secondary-bg:#f3efeb;
+    --secondary-bg:#eeecea;
     --white : #fff;
     --con-width : 1320px;   
 }
@@ -30,6 +30,7 @@ body{
     color: var(--primary-c);
     line-height: calc(var(--line-height)*2);
     text-transform: uppercase;
+    font-weight: 300;
 }
 .vh{
     height:100vh;
@@ -47,6 +48,13 @@ img{
 }
 
 /* ====================== menu ====================== */
+h1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
 .menu{
     display: flex;
     height: calc(var(--line-height)*4);
@@ -99,6 +107,9 @@ header.dark .menu ul li a,
 header.dark .menu .material-symbols-outlined{
     color:var(--primary-c);
     text-shadow: none;
+}
+header.dark .hamburger_btn span{
+    background-color:var(--primary-c) ;
 }
 
 .dark .logo a {
@@ -301,3 +312,61 @@ footer{
     line-height: 35px;
     font-weight: 600;
 }
+
+
+
+/* ============================ 반응형 ============================ */
+
+@media (max-width:1320px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    header nav{
+        gap:30px;
+    }
+    header nav ul{
+        gap:10px;
+    }
+    .con-pd{
+        padding:calc(var(--line-height)*3) 10px;
+    }
+ 
+
+}/* 1320 이하 */
+
+@media (max-width:768px){
+    .menu_right li:last-child,
+    .search_hotel,
+    .language{
+        display: none;
+    }
+    .menu ul{
+        gap:20px;
+    }
+    .container{
+        width: 100%;
+        padding:0 15px;
+    }
+    header{
+        padding:0 15px;
+    }
+    .reservation .container ul{
+        gap:10px;
+    }
+}/* 768 이하 */
+
+@media (max-width:640px){
+   
+ 
+}/* 480 이하 */
+
+
+@media (max-width:480px){
+
+}/* 480 이하 */
+
+@media (max-width:320px){
+
+}/* 320 이하 */
