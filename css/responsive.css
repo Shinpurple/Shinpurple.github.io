@@ -1,0 +1,143 @@
+/* ============================ 반응형 ============================ */
+
+@media (max-width:1320px){
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .reservation .container {        
+        padding: var(--line-height) 20px;
+    }
+    header nav{
+        gap:30px;
+    }
+    header nav ul{
+        gap:10px;
+    }
+    .con-pd{
+        padding:calc(var(--line-height)*3) 10px;
+    }
+
+    .s_04_rewards .container:before{  
+        right: 2%;
+        left: 2%;
+    }
+ 
+
+}/* 1320 이하 */
+
+
+@media (max-width:768px){
+    .main_tt{
+        font-size: 36px;
+    }
+    .menu_right li:last-child,
+    .search_hotel,
+    .language{
+        display: none;
+    }
+    .menu ul{
+        gap:20px;
+    }
+    .container{
+        width: 100%;
+        padding:0 15px;
+    }
+    header{
+        padding:0 15px;
+    }
+    .reservation .container ul{
+        gap:15px;
+    }
+    .reservation .container h2{
+        font-size: 21px;
+    }
+    .reservation .container ul li a{
+        font-size: 18px;
+    }
+
+    .s_04_rewards .container:before{  
+        right: 5%;
+        left: 5%;
+    }
+    .s_04_rewards .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}/* 768 이하 */
+
+@media (max-width:640px){
+    h1{
+        left: 15px;
+        transform: translate(0,-50%);
+    }
+    .menu .menu_right{
+        display: none;
+    }
+    .menu{
+        flex-direction: row-reverse;
+    }
+    .reservation .container{
+        position: relative;
+    }
+    .reservation .container h2{
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--secondary-bg);
+        z-index: 1000;
+    }
+    .reservation .container ul{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .reservation .container ul li a{
+        font-size: 21px;
+    }
+    .reservation .container ul li:nth-child(2){
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .s_01_main .bx-controls-auto{
+        display: none;
+    }
+    .s_04_rewards .content{
+        align-items: flex-start;
+        text-align: start;
+        padding:0 50px;
+    }
+    .s_04_rewards .content >p{
+        width: 422px;
+        padding-bottom: var(--line-height);
+    }
+  
+    .s_04_rewards .content ul{
+        width: 100%;
+        flex-direction: column;
+        gap:0;
+    }
+    .s_04_rewards .content ul li{
+        display: block;
+        padding:var(--line-height) 0;
+    }
+    .s_04_rewards .content ul li:nth-child(2){
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--secondary-c) transparent var(--secondary-c) transparent;
+    }
+ 
+}/* 640 이하 */
+
+
+@media (max-width:480px){
+
+}/* 480 이하 */
+
+@media (max-width:320px){
+
+}/* 320 이하 */

@@ -48,3 +48,9 @@ window.addEventListener('scroll',function(){
 
     console.log($(window).scrollTop);
 
+    $('.hamburger_btn').on('click',function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.allMenu').toggleClass('open');
+     });
+

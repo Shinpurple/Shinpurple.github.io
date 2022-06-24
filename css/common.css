@@ -23,6 +23,7 @@ body{
     font-size: var(--body-fz) ;
     line-height: var(--line-height);
     color:var(--primary-c);
+    word-break: keep-all;
 }
 .main_tt{
     font-family: var(--title-ff);
@@ -103,7 +104,7 @@ header.dark{
     z-index:100;
     
 }
-header.dark .menu ul li a,
+header.dark .menu >ul li a,
 header.dark .menu .material-symbols-outlined{
     color:var(--primary-c);
     text-shadow: none;
@@ -200,6 +201,10 @@ header.dark .hamburger_btn span{
     font-size: 24px;
     opacity: .6;
     transition:.3s;
+}
+.allMenu>ul>li>ul>li>a{
+    opacity: 1;
+    
 }
 .allMenu>ul>li>ul>li:hover{
     opacity: 1;
@@ -315,58 +320,3 @@ footer{
 
 
 
-/* ============================ 반응형 ============================ */
-
-@media (max-width:1320px){
-    .container{
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    header nav{
-        gap:30px;
-    }
-    header nav ul{
-        gap:10px;
-    }
-    .con-pd{
-        padding:calc(var(--line-height)*3) 10px;
-    }
- 
-
-}/* 1320 이하 */
-
-@media (max-width:768px){
-    .menu_right li:last-child,
-    .search_hotel,
-    .language{
-        display: none;
-    }
-    .menu ul{
-        gap:20px;
-    }
-    .container{
-        width: 100%;
-        padding:0 15px;
-    }
-    header{
-        padding:0 15px;
-    }
-    .reservation .container ul{
-        gap:10px;
-    }
-}/* 768 이하 */
-
-@media (max-width:640px){
-   
- 
-}/* 480 이하 */
-
-
-@media (max-width:480px){
-
-}/* 480 이하 */
-
-@media (max-width:320px){
-
-}/* 320 이하 */

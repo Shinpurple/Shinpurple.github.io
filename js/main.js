@@ -20,18 +20,50 @@ $('#fullpage').fullpage({
      $('.hamburger_btn').on('click',function(e){
         e.preventDefault();
         $(this).toggleClass('active');
-        $('header').toggleClass('dark');
+        $('header').addClass('dark');
         $('.allMenu').toggleClass('open');
      });
   
     /* ===================== BX SLIDER ===================== */
-    $('.main_slide').bxSlider();
+    let mainSlide =  $('.main_slide');
+    mainSlide.bxSlider({
+        auto:true,
+        pause:5000,
+        autoControls:true,
+        // autoControlsCombine:true
+        // stopAutoOnClick:true
+    });
+    $(".bx-stop").click(function(){
+        mainSlide.stopAuto(); 
+        $(".bx-stop").hide(); 
+        $(".bx-start").show(); 
+    
+        // return false; 
+    });   
+    
+    $(".bx-start").click(function(){
+        mainSlide.startAuto();   
+        $(".bx-start").hide();  
+        $(".bx-stop").show(); 
+    
+        // return false; 
+      }); 
+
+    $(".bx-start").hide();
+    // $(document).on('click','.bx-next, .bx-prev','bx-start','bx-stop',function() {
+    //     mainSlide.stopAuto();
+    //     mainSlide.startAuto();
+    // });
+
+  
+    
     $('.multi_slide').bxSlider({
         minSlides:1,
         maxSlides:3,
         moveSlides:3,
         slideWidth:420,
-        slideMargin:30
+        slideMargin:30,
+        
     });
     $('.hotel_slide').bxSlider({
         // mode:'fade',
