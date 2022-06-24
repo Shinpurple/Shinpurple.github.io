@@ -19,9 +19,12 @@ $('#fullpage').fullpage({
      /* ======================== MENU ======================== */
      $('.hamburger_btn').on('click',function(e){
         e.preventDefault();
-        $(this).toggleClass('active');
-        $('header').addClass('dark');
         $('.allMenu').toggleClass('open');
+        $(this).toggleClass('active'); 
+        // if($('header').hasClass('dark') == false){
+        //     $('header').toggleClass('dark'); 
+        // }
+        $('header').toggleClass('dark');
      });
   
     /* ===================== BX SLIDER ===================== */
