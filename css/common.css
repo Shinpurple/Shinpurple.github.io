@@ -88,10 +88,13 @@ header{
     transition:.5s;
     
 }
-.menu .logo img{
+.menu .logo a{
+    width: 186px;
     height: 45px;
     display: inline-block;
+    background-image: url(../images/MainLogo\ 1.svg);
     filter: drop-shadow(1px 1px 2px);
+    text-indent: -999999em;
 }
 header.dark{
     position: fixed;
@@ -109,10 +112,24 @@ header.dark .hamburger_btn span{
     background-color:var(--primary-c) ;
 }
 
-/* .dark .logo img {
-    background-image:url('../images/logo_dark.png');
+.dark .logo .big {
+    background-image:url('../images/logo_dark\ 1.svg');
     filter: none;
-} */
+}
+.logo a.small{
+    background: url('../images/logo\ _small.svg') no-repeat;
+    width: 146px;
+    height: 35px;
+}
+.dark .logo a.small {
+    background:url('../images/logo_dark_small.svg') no-repeat;
+    width: 146px;
+    height: 35px;
+    filter: none;
+}
+.logo a.small,.dark .logo a.small{
+    display: none;
+}
 
 .hamburger_btn{
     display: inline-block;

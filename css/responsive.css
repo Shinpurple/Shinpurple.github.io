@@ -6,6 +6,10 @@
         padding: 0 20px;
         box-sizing: border-box;
     }
+    .main_tt{
+        font-size:36px;
+        line-height: calc(var(--line-height)*2);
+    }
     .reservation .container {        
         padding: var(--line-height) 20px;
     }
@@ -22,6 +26,24 @@
     .s_04_rewards .container:before{  
         right: 2%;
         left: 2%;
+    }
+    .s_04_rewards h2{
+        padding: 8% 0;
+    }
+    .s_04_rewards .container{
+        padding:0 100px;
+    }
+    .s_04_rewards .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .s_04_rewards .content ul {
+        gap: 30px;
+    }
+    .s_04_rewards .content .view_more{
+        margin:8% 0;
     }
     .s_05_newsLetter fieldset{
        flex-direction: column;
@@ -54,11 +76,18 @@
 
 
 @media (max-width:768px){
+    .main_slide div h2{
+        width: 600px;
+    }
     .main_tt, .s_02_hotels .main_tt{
         font-size: 36px;
     }
+    .main_slide .content h3{
+        font-size: 24px;  
+    }
     .s_02_hotels .main_tt{
         text-align: center;
+        font-weight: 300;
     }
     .menu_right li:last-child,
     .search_hotel,
@@ -91,8 +120,14 @@
     .accordion{
         display: block;
     }
-
-
+    .s_04_rewards h2{
+        padding: 15% 0;
+    }
+    .s_04_rewards .container{
+        padding:0 100px;
+         margin-top:30px;
+    
+    }
     .s_04_rewards .container:before{  
         right: 5%;
         left: 5%;
@@ -102,6 +137,13 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .s_04_rewards .content ul {
+        gap: 15px;
+    }
+
+    .s_04_rewards .content .view_more{
+        margin:15% 0;
     }
     .s_05_newsLetter .input_wrapper{
         width: 88%;
@@ -149,6 +191,22 @@
 }/* 768 이하 */
 
 @media (max-width:640px){
+    :root {
+        --body-fz:14px;
+        --title-fz:36px;
+        --line-height:21px; 
+    }
+    .logo a.big,.dark .logo a.big{
+        display: none;
+    }
+    .logo a.small,.dark .logo a.small{
+        display: block;
+    }
+    
+    body{
+        font-size: 14px;
+        line-height: 21px;
+    }
     h1{
         left: 15px;
         transform: translate(0,-50%);
@@ -158,10 +216,31 @@
     }
     .menu{
         flex-direction: row-reverse;
+        height: calc(var(--line-height)*3);
+    }
+    header.small .logo a {
+        background-image:url('../images/logo\ _small.svg');
+        width: 146px;
+        height: 35px;
+    }
+    header.small_dark .logo a {
+        background-image:url('../images/logo_dark\ 1.svg');
+        width: 146px;
+        height: 35px;
+    }
+    .main_slide div h2{
+       font-size: 30px;
+       line-height: 40px;
+       width: 500px;
+    }
+    .main_slide div img{
+        height: 30px;
     }
     .reservation .container{
         position: relative;
+        padding:15px 30px;
     }
+  
     .reservation .container h2{
         position: absolute;
         bottom: calc(100% - 3px);
@@ -170,11 +249,11 @@
         background: var(--secondary-bg);
         z-index: 1000;
         font-size: 16px;
-        line-height: 42px;
+        line-height: 40px;
         font-weight: 500;
         letter-spacing: 2px;
         color:rgba(83,78,74,.5);
-        width: 280px;
+        width: 250px;
         text-align: center;
         border-radius: 3px;
     }
@@ -191,18 +270,35 @@
         transform: translateX(-50%);
     }
     .s_01_main .bx-pager{
-        bottom: 150px;
+        bottom: 130px;
+    }
+    .s_01_main .bx-pager-item a{
+        width: 83px;
     }
     .s_01_main .bx-controls-auto{
         display: none;
     }
+    .s_02_hotels .main_tt{
+        text-align: left;
+        padding-left: 15px;
+    }
+    .accordion{
+        height: calc(100vh - (var(--line-height)*3));
+        margin-top: calc(var(--line-height)*3);
+    }
+    .accordion h2{
+        padding: 7% 0;
+    }
+    .s_04_rewards .container{
+        padding:0 10%;
+        margin-top:50px;
+    }
     .s_04_rewards .content{
         align-items: flex-start;
         text-align: start;
-        padding:0 50px;
     }
     .s_04_rewards .content >p{
-        width: 422px;
+        width: 400px;
         padding-bottom: var(--line-height);
     }
   
@@ -222,32 +318,11 @@
         border-color: var(--secondary-c) transparent var(--secondary-c) transparent;
     }
     .s_04_rewards h2{
-        padding: calc(var(--line-height)*3) 0 calc(var(--line-height)*2) 0;
+        padding: 15% 0;
     }
     .s_04_rewards .content .view_more{
         margin:var(--line-height) 0 calc(var(--line-height)*3) 0;
     }
-    .accordion_menu > li:first-child img,
-    .accordion_menu > li:nth-child(2) img{
-        height: 40px;
-        margin: 27.5px 0;
-    }
-    .accordion_menu > li:nth-child(3) img,
-    .accordion_menu > li:nth-child(4) img{
-        height: 20px;
-        margin: 37.5px 0;
-    }
-    .accordion_menu >li .add_icon:first-of-type{
-        top: 42px;
-    }
-    .accordion_menu >li .add_icon:nth-of-type(2){
-        top: 31px;
-    }
-    /* .accordion_wrapper{
-        position:absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
 
  
 }/* 640 이하 */

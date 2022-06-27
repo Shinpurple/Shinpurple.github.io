@@ -20,23 +20,33 @@ $('#fullpage').fullpage({
 	}  
 });
      /* ======================== MENU ======================== */
-   
+  
+
      $('.hamburger_btn').on('click',function(e){
         e.preventDefault();
         $('.allMenu').toggleClass('open');
-        $(this).toggleClass('active');  
-        
+        $(this).toggleClass('active'); 
+           
         if(fullpageNumber != 0 && fullpageNumber != 3){
             $('header').addClass('dark');
         }else{
             $('header').toggleClass('dark');
         }
      });
-    //  let logoImg = $('header h1 img');
-    //  if($(header).hasClass('dark') == true){
-    //     var dark = logoImg.attr('data-dark');
-    //     logoImg.attr('src',dark);
-    //  }
+
+    //  $(window).resize(function() {
+    //     if($(window).width() > 640) { 
+    //         $('header').addClass('small');	
+    //         if(fullpageNumber != 0 && fullpageNumber != 3){
+    //             $('header').addClass('small_dark');
+    //         }else{
+    //             $('header').toggleClass('small_dark');
+    //         }		
+           
+    //     } 
+    // });
+   
+   
   
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');

@@ -55,12 +55,8 @@ body,html{
     color:#fff;
     font-weight: 300;
 }
-.main_slide span{
-    width: 296px;
+.main_slide >div img{
     height: 35px;
-    display: inline-block;
-    background-image: url(../images/membersOnly.png);
-    text-indent: -9999999em;
     margin: var(--line-height) 0;
 }
 
@@ -311,64 +307,81 @@ body,html{
 .accordion>*{
     color:#fff;
 }
+/* .accordion_wrapper{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+.accordion_menu > *{
+    font-size: 14px;
+    line-height: 21px;
+}
+.accordion h2{
+    padding: 5% 0;
+}
 .accordion_menu > li:first-child img,
 .accordion_menu > li:nth-child(2) img{
-    height: 35px;
-    margin: 22.5px 0;
+    height: 30px;
+    margin: 20px 0;
 }
 .accordion_menu > li:nth-child(3) img,
 .accordion_menu > li:nth-child(4) img{
     height: 15px;
-    margin: 32.5px 0;
+    margin: 27.5px 0;
 }
+
 .accordion_menu > li{
-    padding: 0 15px;
-    margin-bottom: 15px;
+    padding: 0 20px;
+    margin-bottom: 10px;
 }
 .accordion_menu ul{
     display: none;
 }
 .accordion_menu >li{
-    border:2px solid #fff;
+    border:1px solid #fff;
     border-radius: 3px;
     box-sizing: border-box;
     position:relative;
 }
-.accordion_menu >li .material-symbols-outlined{
-    position:absolute;
-    font-size: 40px;
-    top: 17.5px;
-    right: 20px;
-}
+
 .accordion_menu >li .add_icon{
     position:absolute;
     background-color: #fff;
     display: inline-block;
 }
 .accordion_menu >li .add_icon:first-of-type{
-    width: 24px;
-    height: 2px;
+    width: 16px;
+    height: 1px;
     top: 35px;
-    right: 30px;
+    right: 20px;
 }
 .accordion_menu >li .add_icon:nth-of-type(2){
-    width: 2px;
-    height: 24px;
-    top: 25px;
-    right: 41px;
+    width: 1px;
+    height: 16px;
+    top: 27px;
+    right: 28px;
     transition:.3s;
 }
 .accordion_menu >li.active .add_icon:nth-of-type(2){
     transform: rotate(90deg);
 }
 .accordion_menu .view_more{
-    margin:var(--line-height) 0;
+    margin:21px 0;
+    font-size: 14px;
+    font-weight: 400;
+    border:1px solid #fff;
+    transition: .3s;
 }
+.accordion_menu .view_more:hover{
+    background-color: #fff;
+    color:#000;
+}
+
 .accordion_menu  h3{
     font-family: var(--title-ff);
     font-weight: 600;
     text-transform: uppercase;
-    margin:var(--line-height) 0;
+    margin:21px 0;
 }
 
 /* ==================== 03 SPECIAL OFFER ==================== */
@@ -531,7 +544,7 @@ body,html{
     
 }
 .s_04_rewards h2{
-    padding: calc(var(--line-height)*6) 0 calc(var(--line-height)*3) 0;
+    padding: 10% 0 calc(var(--line-height)*3) 0;
 }
 
 .s_04_rewards .content ul{
@@ -557,7 +570,7 @@ body,html{
 }
 .s_04_rewards .content .view_more{
     width: 194px;
-    margin:calc(var(--line-height)*2) 0 calc(var(--line-height)*6) 0;
+    margin:calc(var(--line-height)*2) 0 10% 0;
     color:var(--primary-c);
     border:2px solid var(--primary-c);
     transition:.3s;
