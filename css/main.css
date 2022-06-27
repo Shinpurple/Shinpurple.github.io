@@ -214,7 +214,7 @@ body,html{
 }
 
 .tab_menu li a img{
-    /* height: 54px; */
+    height: 54px;
     position:relative;
 }
 
@@ -288,6 +288,89 @@ body,html{
 #hotel4{
     background-image: url(../images/hotel_stay.jpg);
 }
+/* ------------ Accordion ------------ */
+.accordion{
+    display: none;
+}
+.accordion{
+    width: 100%;
+    background:url(../images/hotel_seoul_acd.jpeg) no-repeat center/cover;
+    height: calc(100vh - (var(--line-height)*4));
+    margin-top: calc(var(--line-height)*4);
+    position: relative;
+    z-index: 0;
+    
+}
+.accordion:after{
+    content:'';
+    position:absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    background:rgba(0,0,0,.5);
+    z-index: -1;
+}
+.accordion>*{
+    color:#fff;
+}
+.accordion_menu > li:first-child img,
+.accordion_menu > li:nth-child(2) img{
+    height: 35px;
+    margin: 22.5px 0;
+}
+.accordion_menu > li:nth-child(3) img,
+.accordion_menu > li:nth-child(4) img{
+    height: 15px;
+    margin: 32.5px 0;
+}
+.accordion_menu > li{
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+.accordion_menu ul{
+    display: none;
+}
+.accordion_menu >li{
+    border:2px solid #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position:relative;
+}
+.accordion_menu >li .material-symbols-outlined{
+    position:absolute;
+    font-size: 40px;
+    top: 17.5px;
+    right: 20px;
+}
+.accordion_menu >li .add_icon{
+    position:absolute;
+    background-color: #fff;
+    display: inline-block;
+}
+.accordion_menu >li .add_icon:first-of-type{
+    width: 24px;
+    height: 2px;
+    top: 35px;
+    right: 30px;
+}
+.accordion_menu >li .add_icon:nth-of-type(2){
+    width: 2px;
+    height: 24px;
+    top: 25px;
+    right: 41px;
+    transition:.3s;
+}
+.accordion_menu >li.active .add_icon:nth-of-type(2){
+    transform: rotate(90deg);
+}
+.accordion_menu .view_more{
+    margin:var(--line-height) 0;
+}
+.accordion_menu  h3{
+    font-family: var(--title-ff);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin:var(--line-height) 0;
+}
+
 /* ==================== 03 SPECIAL OFFER ==================== */
 .s_03_offer{
     height: 100vh;
@@ -494,16 +577,18 @@ body,html{
 }
 .s_05_newsLetter fieldset{
     display: flex;
-    flex-wrap: nowrap;
     gap:50px;
     justify-content: center;
 }
 .s_05_newsLetter .input{
-    display: flex;
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 .s_05_newsLetter fieldset em{
     font-size: 30px;
-    line-height: 48px;
+    line-height: 55px;
     font-family: var(--body-ff);
     font-weight: 600;
     color:var(--primary-c);
@@ -511,14 +596,14 @@ body,html{
     display: inline-block;
 }
 .email_input{
-    padding:0 10px;
     height: calc(var(--line-height)*2);
     background-color: #fff;
     border-radius: 2px;
     border:1px solid  var(--secondary-c);
+    width: 700px;
 }
 .email_input input{
-    width: 350px;
+    min-width: 48%;
     height: 52px;
     font-weight: 600;
     color:var(--primary-c);

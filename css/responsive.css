@@ -18,19 +18,47 @@
     .con-pd{
         padding:calc(var(--line-height)*3) 10px;
     }
-
+  
     .s_04_rewards .container:before{  
         right: 2%;
         left: 2%;
     }
- 
+    .s_05_newsLetter fieldset{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .s_05_newsLetter fieldset em{
+        width: 100%;
+    }
+    .s_05_newsLetter .input_wrapper{
+        width: 77%;
+    }
+    .s_05_newsLetter .input_wrapper .email_input{
+        width: 80%;
+    }
+    .s_05_newsLetter .input_wrapper button{
+        width: 17%;
+        margin-left: 3%;
+    }
+    .s_05_newsLetter form{
+        padding:100px 0;
+        width: 100%;
+    }
+    .email_input input{
+        min-width:45%;
+        font-size: 18px;
+    }
 
 }/* 1320 이하 */
 
 
 @media (max-width:768px){
-    .main_tt{
+    .main_tt, .s_02_hotels .main_tt{
         font-size: 36px;
+    }
+    .s_02_hotels .main_tt{
+        text-align: center;
     }
     .menu_right li:last-child,
     .search_hotel,
@@ -48,14 +76,22 @@
         padding:0 15px;
     }
     .reservation .container ul{
-        gap:15px;
+        gap:20px;
     }
     .reservation .container h2{
-        font-size: 21px;
+        font-size: 24px;
     }
     .reservation .container ul li a{
-        font-size: 18px;
+        font-size: 21px;
     }
+
+    .tab_wrapper{
+        display: none;
+    }
+    .accordion{
+        display: block;
+    }
+
 
     .s_04_rewards .container:before{  
         right: 5%;
@@ -67,6 +103,49 @@
         align-items: center;
         text-align: center;
     }
+    .s_05_newsLetter .input_wrapper{
+        width: 88%;
+    }
+    .s_05_newsLetter .input_wrapper .email_input{
+        width: 100%;
+    }
+    .s_05_newsLetter .input_wrapper button{
+        width: 100%;
+        margin-left: 0;
+    }
+    .s_05_newsLetter .input{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer_top .sns{
+        display: none;
+        
+    }
+    .sns_tablet{
+        display: block;
+        font-size: 25px;
+    }
+    .sns_tablet ul{
+        display: flex;
+        gap: 20px;
+        justify-content: right;
+    }
+
+    .brand_logo ul{
+        justify-content: space-between;
+    }
+    .footer_right{
+        padding-top:calc(var(--line-height)*2);
+    }
+    .footer_right .link{
+        display: none;
+    }
+    .footer_right .contact{
+        flex-direction: column;
+        gap:0;
+        width: 230px;
+    }
+   
 }/* 768 이하 */
 
 @media (max-width:640px){
@@ -148,6 +227,28 @@
     .s_04_rewards .content .view_more{
         margin:var(--line-height) 0 calc(var(--line-height)*3) 0;
     }
+    .accordion_menu > li:first-child img,
+    .accordion_menu > li:nth-child(2) img{
+        height: 40px;
+        margin: 27.5px 0;
+    }
+    .accordion_menu > li:nth-child(3) img,
+    .accordion_menu > li:nth-child(4) img{
+        height: 20px;
+        margin: 37.5px 0;
+    }
+    .accordion_menu >li .add_icon:first-of-type{
+        top: 42px;
+    }
+    .accordion_menu >li .add_icon:nth-of-type(2){
+        top: 31px;
+    }
+    /* .accordion_wrapper{
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    } */
+
  
 }/* 640 이하 */
 

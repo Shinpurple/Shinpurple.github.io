@@ -1,15 +1,18 @@
+let fullpageNumber = 0;
+
 $('#fullpage').fullpage({
     //options here
     autoScrolling:true,
     scrollHorizontally: true,
     afterLoad: function(origin, destination, direction, trigger){
 		var origin = this;
+        fullpageNumber = destination.index;
 
         console.log(destination.index);
 
 	
         if(destination.index != 0 && destination.index != 3){
-            $('header').addClass('dark');
+            $('header').addClass('dark');         
         } else{
             $('header').removeClass('dark'); 
         }
@@ -17,15 +20,23 @@ $('#fullpage').fullpage({
 	}  
 });
      /* ======================== MENU ======================== */
+   
      $('.hamburger_btn').on('click',function(e){
         e.preventDefault();
         $('.allMenu').toggleClass('open');
-        $(this).toggleClass('active'); 
-        // if($('header').hasClass('dark') == false){
-        //     $('header').toggleClass('dark'); 
-        // }
-        $('header').toggleClass('dark');
+        $(this).toggleClass('active');  
+        
+        if(fullpageNumber != 0 && fullpageNumber != 3){
+            $('header').addClass('dark');
+        }else{
+            $('header').toggleClass('dark');
+        }
      });
+    //  let logoImg = $('header h1 img');
+    //  if($(header).hasClass('dark') == true){
+    //     var dark = logoImg.attr('data-dark');
+    //     logoImg.attr('src',dark);
+    //  }
   
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');
@@ -114,8 +125,20 @@ $('#fullpage').fullpage({
         
         hotelLogo.eq(0).trigger("click");
     
+    /* ===================== ACCORDION ===================== */
 
-
-
+    let hotelMenu = $('.accordion_menu > li');
+    let accordionBg = $('.accordion');
 
    
+    hotelMenu.click(function(e){
+        e.preventDefault();
+        $(this).find('ul').slideToggle();
+        $(this).siblings().find('ul').slideUp();
+        $(this).toggleClass('active');
+        $(this).siblings().removeClass('active');
+        let newBg = $(this).attr('data-acd-bg');
+        accordionBg.css({backgroundImage:'url('+ newBg +')'});
+    });
+
+

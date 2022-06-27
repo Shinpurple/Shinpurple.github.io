@@ -88,13 +88,9 @@ header{
     transition:.5s;
     
 }
-.menu .logo a{
-    width:165px;
+.menu .logo img{
     height: 45px;
-    background:url(../images/MainLogo.png) no-repeat;
     display: inline-block;
-    text-indent: -9999em;
-    margin: auto 0;
     filter: drop-shadow(1px 1px 2px);
 }
 header.dark{
@@ -113,10 +109,10 @@ header.dark .hamburger_btn span{
     background-color:var(--primary-c) ;
 }
 
-.dark .logo a {
+/* .dark .logo img {
     background-image:url('../images/logo_dark.png');
     filter: none;
-}
+} */
 
 .hamburger_btn{
     display: inline-block;
@@ -224,6 +220,15 @@ footer{
 .brand_logo ul{
     display: flex;
     gap: 40px;
+    align-content: center;
+    justify-content: center;
+}
+.brand_logo ul li a{
+    display: inline-block;
+    line-height: 30px;
+}
+.brand_logo ul li img{
+    vertical-align: middle;
 }
 
 .footer_top{
@@ -245,14 +250,18 @@ footer{
     height: 30px;
 }
 .brand_logo li:nth-child(3) img,.brand_logo li:nth-child(4) img{
-    height: 13px;
+    height: 15px;
 }
 .footer_top .sns ul{
     display: flex;
     gap:20px;
 }
+.sns_tablet{
+    display: none;
+}
 .footer_main{
     justify-content: space-between;
+ 
 }
 .footer_left img{
     margin:var(--line-height) 0;
@@ -260,11 +269,12 @@ footer{
 .footer_left .info{
     font-size: 14px;
     color:#fff;
+    padding-bottom: var(--line-height);
 }
 .footer_right{
     display: flex;
     flex-direction: column;
-    padding-top:calc(var(--line-height)*3)
+    padding-top:calc(var(--line-height)*4)
 }
 .footer_right .link{
     display: flex;
