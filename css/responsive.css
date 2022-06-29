@@ -6,9 +6,12 @@
         padding: 0 20px;
         box-sizing: border-box;
     }
-    .main_tt{
+    .main_tt, .s_02_hotels h2{
         font-size:36px;
-        line-height: calc(var(--line-height)*2);
+        
+    }
+    .s_02_hotels h2 {
+        padding: calc(var(--line-height)*2) 0;
     }
     .reservation .container {        
         padding: var(--line-height) 20px;
@@ -21,6 +24,9 @@
     }
     .con-pd{
         padding:calc(var(--line-height)*3) 10px;
+    }
+    .tab_menu li a img{
+        height: calc(54px * .8);
     }
   
     .s_04_rewards .container:before{  
@@ -74,8 +80,102 @@
 
 }/* 1320 이하 */
 
+@media (max-width:940px){
+    .allMenu .main_gnb>li{
+        font-size: 24px;
+    }
+    .allMenu .main_gnb>li>ul>li{
+        font-size: 18px;
+    }
+    .footer_top .sns{
+        display: none;
+        
+    }
+    .sns_tablet{
+        display: block;
+        font-size: 21px;
+        margin-bottom: var(--line-height);
+    }
+      
+    .sns_tablet ul{
+        display: flex;
+        justify-content: right;
+        gap:20px;
+    }
+  
+    .brand_logo{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .footer_right .link{
+        display: none;
+    }
+    .footer_right{
+        justify-content: flex-end;
+    }
+     
+    .footer_right .contact{
+        flex-direction: column;
+        gap:0;
+        width: 170px;
+        margin-top:0;
+    }
+}/* 940 이하 */
 
 @media (max-width:768px){
+    :root {
+        --body-fz:16px;
+        --title-fz:36px;
+        --line-height:24px; 
+    }
+    .menu{
+        height: calc(var(--line-height)*3);
+    }
+    .allMenu.open{
+        top:calc(var(--line-height)*3);
+    }
+    /* -- */
+
+       .allMenu .main_gnb{
+        flex-direction: column;
+        gap: 50px;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-200px);
+     }
+     .allMenu .main_gnb>li>ul{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        /* transform: translateX(200px); */
+        margin-top:0;
+        gap: 50px;
+     }
+     .allMenu .main_gnb>li>ul>li{
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+     }
+    
+    
+     /* -- */
+    .logo a.big,.dark .logo a.big{
+        display: none;
+    }
+    .logo a.small,.dark .logo a.small{
+        display: block;
+    }
+    header.small .logo a {
+        background-image:url('../images/logo\ _small.svg');
+        width: 146px;
+        height: 35px;
+    }
+    header.small_dark .logo a {
+        background-image:url('../images/logo_dark\ 1.svg');
+        width: 146px;
+        height: 35px;
+    }
     .main_slide div h2{
         width: 600px;
     }
@@ -94,7 +194,7 @@
     .language{
         display: none;
     }
-    .menu ul{
+    .menu >ul{
         gap:20px;
     }
     .container{
@@ -117,8 +217,11 @@
     .tab_wrapper{
         display: none;
     }
+ 
     .accordion{
         display: block;
+        height: calc(100vh - (var(--line-height)*3));
+        margin-top: calc(var(--line-height)*3);
     }
     .s_04_rewards h2{
         padding: 15% 0;
@@ -159,48 +262,32 @@
         flex-direction: column;
         gap: 10px;
     }
-    .footer_top .sns{
-        display: none;
-        
+  
+    .brand_logo li:first-child img,.brand_logo li:nth-child(2) img{
+        height: calc(30px * .8);
     }
-    .sns_tablet{
-        display: block;
-        font-size: 25px;
+    .brand_logo li:nth-child(3) img,.brand_logo li:nth-child(4) img{
+        height: calc(15px * .8);
     }
-    .sns_tablet ul{
-        display: flex;
-        gap: 20px;
-        justify-content: right;
+    .footer_top{
+        justify-content: center;
+    }
+    .footer_bottom ul{  
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,.5);
+        text-align: center;
     }
 
-    .brand_logo ul{
-        justify-content: space-between;
-    }
-    .footer_right{
-        padding-top:calc(var(--line-height)*2);
-    }
-    .footer_right .link{
-        display: none;
-    }
-    .footer_right .contact{
-        flex-direction: column;
-        gap:0;
-        width: 230px;
-    }
+
    
 }/* 768 이하 */
 
 @media (max-width:640px){
     :root {
         --body-fz:14px;
-        --title-fz:36px;
-        --line-height:21px; 
-    }
-    .logo a.big,.dark .logo a.big{
-        display: none;
-    }
-    .logo a.small,.dark .logo a.small{
-        display: block;
     }
     
     body{
@@ -216,18 +303,8 @@
     }
     .menu{
         flex-direction: row-reverse;
-        height: calc(var(--line-height)*3);
     }
-    header.small .logo a {
-        background-image:url('../images/logo\ _small.svg');
-        width: 146px;
-        height: 35px;
-    }
-    header.small_dark .logo a {
-        background-image:url('../images/logo_dark\ 1.svg');
-        width: 146px;
-        height: 35px;
-    }
+
     .main_slide div h2{
        font-size: 30px;
        line-height: 40px;
@@ -269,6 +346,8 @@
         left: 50%;
         transform: translateX(-50%);
     }
+  
+ 
     .s_01_main .bx-pager{
         bottom: 130px;
     }
@@ -282,10 +361,7 @@
         text-align: left;
         padding-left: 15px;
     }
-    .accordion{
-        height: calc(100vh - (var(--line-height)*3));
-        margin-top: calc(var(--line-height)*3);
-    }
+  
     .accordion h2{
         padding: 7% 0;
     }
@@ -323,6 +399,32 @@
     .s_04_rewards .content .view_more{
         margin:var(--line-height) 0 calc(var(--line-height)*3) 0;
     }
+    .email_input input{
+        font-size: 13px;
+    }
+    .footer_right .contact{
+        display: none;
+    }
+    .footer_main{
+        align-items: flex-start;
+    }
+    .logo_long{
+        display: none;
+    }
+    .logo_short{
+        display: block;
+    
+    }
+    .logo_short a{
+        display: inline-block;
+    }
+    .logo_short .mono img{
+        height: 23px;
+    }
+    .logo_short .stay img{
+        height: 10px;
+    }
+
 
  
 }/* 640 이하 */

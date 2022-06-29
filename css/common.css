@@ -172,7 +172,10 @@ header.dark .hamburger_btn span{
 }
 
 /* --------all menu-------- */
-
+.allMenu .menu_top, 
+.allMenu .menu_bottom{
+    display: none;
+}
 .allMenu{
     position:fixed;
     left: 0;
@@ -189,37 +192,36 @@ header.dark .hamburger_btn span{
 .allMenu.open{
     transform: none;
     transition:.5s;
-    top:108px;
+    top:calc(var(--line-height)*4);
 }
-.allMenu>ul{
-    height: 100%;
+.allMenu .main_gnb{
     display: flex;
     justify-content: space-between;
     margin-top:250px;
 }
-.allMenu>ul>li{
+.allMenu .main_gnb>li{
     font-size: 30px;
     font-family: var(--title-ff);
     text-transform: uppercase;
    
 }
-.allMenu>ul>li>ul{
+.allMenu .main_gnb>li>ul{
     display: flex;
     flex-direction: column;
     margin-top:40px;
 }
-.allMenu>ul>li>ul>li{
+.allMenu .main_gnb>li>ul>li{
     font-family: var(--body-ff);
     font-weight: 300;
     font-size: 24px;
     opacity: .6;
     transition:.3s;
 }
-.allMenu>ul>li>ul>li>a{
+.allMenu .main_gnb>li>ul>li>a{
     opacity: 1;
     
 }
-.allMenu>ul>li>ul>li:hover{
+.allMenu .main_gnb>li>ul>li:hover{
     opacity: 1;
 }
 
@@ -238,7 +240,7 @@ footer{
     display: flex;
     gap: 40px;
     align-content: center;
-    justify-content: center;
+    
 }
 .brand_logo ul li a{
     display: inline-block;
@@ -252,9 +254,10 @@ footer{
     height: calc(var(--line-height)*3);
     justify-content: space-between;
     align-items: center;
-    padding:auto 0;  
+    
     
 }
+
 .footer_top::after{
     content:'';
     position:absolute;
@@ -278,20 +281,19 @@ footer{
 }
 .footer_main{
     justify-content: space-between;
- 
+    padding: var(--line-height) 0;
+    align-items:flex-end;
 }
 .footer_left img{
-    margin:var(--line-height) 0;
+    margin-bottom:var(--line-height);
 }
 .footer_left .info{
     font-size: 14px;
     color:#fff;
-    padding-bottom: var(--line-height);
 }
 .footer_right{
     display: flex;
     flex-direction: column;
-    padding-top:calc(var(--line-height)*4)
 }
 .footer_right .link{
     display: flex;
@@ -317,6 +319,7 @@ footer{
     display: flex;
     width:450px;
     gap:30px;
+    font-size: 14px;
     margin-top:var(--line-height);
 }
 .footer_bottom ul{  
@@ -325,6 +328,9 @@ footer{
     font-size: 16px;
     padding: var(--line-height) 0;
     border-top: 1px solid rgba(255,255,255,.5);
+}
+.logo_short{
+    display: none;
 }
 
 .top{
