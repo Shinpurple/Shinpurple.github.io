@@ -34,19 +34,15 @@ $('#fullpage').fullpage({
         }
      });
 
-    //  $(window).resize(function() {
-    //     if($(window).width() > 640) { 
-    //         $('header').addClass('small');	
-    //         if(fullpageNumber != 0 && fullpageNumber != 3){
-    //             $('header').addClass('small_dark');
-    //         }else{
-    //             $('header').toggleClass('small_dark');
-    //         }		
-           
-    //     } 
-    // });
-   
-   
+     let depth1 = $('.allMenu .main_gnb>li');
+     let depth2 = $('.allMenu .main_gnb>li>ul');
+
+    depth1.click(function(e){
+        // e.preventDefault();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    })
+    depth1.eq(0).trigger("click");
   
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');
@@ -91,7 +87,7 @@ $('#fullpage').fullpage({
     });
     $('.hotel_slide').bxSlider({
         // mode:'fade',
-        slideWidth:1320
+        slideWidth:900
     });
     
     /* ===================== RESERVATION ===================== */

@@ -10,6 +10,14 @@
         font-size:36px;
         
     }
+
+    
+    .s_01_main .bx-controls .bx-prev{
+        margin-left: -400px;
+    }
+    .s_01_main .bx-controls .bx-next{
+        margin-left: 400px;
+    }
     .s_02_hotels h2 {
         padding: calc(var(--line-height)*2) 0;
     }
@@ -78,6 +86,13 @@
         font-size: 18px;
     }
 
+    .lt strong{
+        width: 140px;
+    }
+    .right .rb a::before{
+        width: 20vw;
+    }
+
 }/* 1320 이하 */
 
 @media (max-width:940px){
@@ -121,6 +136,9 @@
         width: 170px;
         margin-top:0;
     }
+    .s_01 .lt h2{
+        width: 130px;
+    }
 }/* 940 이하 */
 
 @media (max-width:768px){
@@ -136,29 +154,85 @@
         top:calc(var(--line-height)*3);
     }
     /* -- */
+    .allMenu{
+        height: calc(100vh  - (var(--line-height)*3));
+    }
+    .allMenu::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 320px;
+        background-color: rgba(255,255,255,.5);
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .allMenu .menu_top,
+    .allMenu .menu_bottom{
+        display: flex;
+    }
+    .allMenu .menu_top .menu_mobile{
+        display: none;
+    }
+    .allMenu .menu_top .menu_tablet,
+    .allMenu .menu_bottom{
+        font-size: 18px;
+        padding:var(--line-height) 50px;
+        justify-content: space-between;
+    }
+    .allMenu .menu_top .menu_tablet{
+        border-bottom: 1px solid rgba(255,255,255,.5);
+        width: 100%;
+    }
+    .allMenu .menu_bottom{
+        background-color: var(--secondary-bg);
+        position: absolute;
+        left: 0;right: 0;
+        bottom: 0;
+        color:var(--primary-c);
+     }
+     .allMenu .menu_bottom li:nth-child(2){
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+     }
+    
 
-       .allMenu .main_gnb{
+    .allMenu .main_gnb{
         flex-direction: column;
         gap: 50px;
         position:absolute;
-        left: 50%;
-        transform: translateX(-200px);
+        margin-top:0;
+        width: 50vw;
+       text-align: center;
+       top: 50%;
+       transform: translateY(-50%);
+
      }
      .allMenu .main_gnb>li>ul{
         position: absolute;
         top: 0;
-        left: 50%;
-        /* transform: translateX(200px); */
+        left: 50vw;
         margin-top:0;
-        gap: 50px;
+        display: none;
      }
      .allMenu .main_gnb>li>ul>li{
+        font-size: 24px;
+        width: 50vw;
+        text-align: center;
+     }
+     .allMenu .main_gnb>li{
+        opacity: .6;
+     }
+     .allMenu .main_gnb>li.active{
+        opacity: 1;
+     }
+     .allMenu .main_gnb>li.active ul{
         display: flex;
         flex-direction: column;
-        font-size: 24px;
+        gap: 50px;
      }
-    
-    
+   
      /* -- */
     .logo a.big,.dark .logo a.big{
         display: none;
@@ -178,6 +252,18 @@
     }
     .main_slide div h2{
         width: 600px;
+    }
+      
+    .s_01_main .bx-controls-direction a{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .s_01_main .bx-controls .bx-prev{
+        margin-left: -300px;
+    }
+    .s_01_main .bx-controls .bx-next{
+        margin-left: 300px;
     }
     .main_tt, .s_02_hotels .main_tt{
         font-size: 36px;
@@ -280,7 +366,16 @@
         border-top: 1px solid rgba(255,255,255,.5);
         text-align: center;
     }
-
+    /* --- SUB PAGE_hotel_seoul --- */
+    .s_01{
+        padding-top:calc(var(--line-height)*3);
+    }
+    .right{
+        width: 60%;
+    }
+    .left{
+        width: 40%;
+    }
 
    
 }/* 768 이하 */
@@ -304,7 +399,46 @@
     .menu{
         flex-direction: row-reverse;
     }
-
+    .allMenu .menu_top{
+        flex-direction: column;
+    }
+    .allMenu .menu_top .menu_mobile{
+        display: flex;
+        padding:var(--line-height) 0;
+        justify-content: center;
+        gap:0;
+    }
+    .allMenu .menu_top .menu_mobile li{
+        line-height: 30px;
+        width: 100px;
+        text-align: center;
+        position: relative;
+        font-weight: 600;
+    }
+    .allMenu .menu_top .menu_mobile li a::after,
+    .allMenu .menu_top .menu_mobile li:first-child a::before{
+        content: '';
+        position:absolute;
+        width: 1.5px;
+        height: 20px;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .allMenu .menu_top .menu_mobile li:first-child a::before{
+        left: 0;
+    }
+    .allMenu .main_gnb>li>ul>li{
+        font-size: 21px;
+    }
+    .allMenu .menu_top .menu_tablet,
+    .allMenu .menu_bottom{
+        font-size: 16px;
+    }
+    .s_01_main .bx-controls-direction a{
+      display: none;
+    }
     .main_slide div h2{
        font-size: 30px;
        line-height: 40px;
@@ -425,6 +559,14 @@
         height: 10px;
     }
 
+    .s_01 > .text_wrapper > .lt > h2{
+        font-size: 30px;
+        width: 110px;
+    }
+    .lt strong{
+        font-size: 16px;
+    }
+  
 
  
 }/* 640 이하 */

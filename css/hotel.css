@@ -14,7 +14,6 @@ header.dark{
 }
 /* ====================== section1 ====================== */
 .s_01{
-    
     height:100vh;
     display: flex;
    padding-top:calc(var(--line-height)*4);
@@ -36,9 +35,19 @@ header.dark{
     align-items: center;
     justify-content: center;
 }
+.lt > .text_wrapper > h2{
+    display: inline-block;
+}
+.text_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .lt strong{
-    font-size: 24px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 32px;
     text-transform: uppercase;
     font-family: var(--title-ff);
     margin-top: var(--line-height);
@@ -55,6 +64,7 @@ header.dark{
     background-image:url(../images/hotel_seoul_main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 85%;
     position:relative;
 }
@@ -73,7 +83,7 @@ header.dark{
     position:relative;
 }
 .right .rb a{
-    font-size: 24px;
+    font-size: 21px;
     position:absolute;
     right: 50px;
 }
@@ -96,7 +106,7 @@ header.dark{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height:850px;
+    height:70vh;
     position:relative;
     z-index: 0;
     display: block;
@@ -113,6 +123,7 @@ header.dark{
     position:absolute;
     top: 50%;left: 50%;
     transform: translate(-50%,-50%);
+    display: block;
 }
 div.text{
     margin-top: 32px;
@@ -129,7 +140,7 @@ div.text{
     margin:calc(var(--line-height)*4) 0;
 }
 .s_03 .bg{
-    width:60%;
+    width:70%;
     height:730px;
     background: var(--primary-c);
     position:absolute;
@@ -145,8 +156,17 @@ div.text{
     margin:0 auto 100px ;
     padding-top:200px;
 }
+.s_03 .container{
+    width: 1000px;
+}
 
-
+.hotel_slide .content img{
+    width: 400px;
+    margin-left: 100px;
+}
+.hotel_slide .content h2{
+    margin-left: 100px;
+}
 .hotel_slide .content{
     display: flex;
     position:relative;
@@ -154,7 +174,7 @@ div.text{
 .hotel_slide .content .dsc{
     position:absolute;
     top:calc(var(--line-height)*2);
-    left: 650px;
+    left: 550px;
     color:#fff;
 }
 .hotel_slide .content .dsc em{
