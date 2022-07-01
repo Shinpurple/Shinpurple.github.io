@@ -136,9 +136,60 @@
         width: 170px;
         margin-top:0;
     }
+    /* --- SUB PAGE_hotel_seoul --- */
     .s_01 .lt h2{
         width: 130px;
     }
+    .s_02 p{
+        font-size: 16px;
+        line-height: 32px;
+        width: 700px;
+    }
+   
+    .s_03{
+        position:relative;
+        margin:calc(var(--line-height)*3) 0;
+    }
+    .s_03 .bg{
+        width:80%;
+        height:700px;
+    }
+    .s_03 .bg h2{
+        margin-top:calc(var(--line-height)*6);
+        margin-left: 100px;
+    
+    }
+    .bx-wrapper{
+        margin:0 auto 100px ;
+        padding-top:350px;
+    }
+
+    .hotel_slide .content img{
+        width: 350px;
+        margin-left: 0;
+    }
+    .hotel_slide .content h2{
+        margin-left: 0;
+    }
+    .hotel_slide .content{
+        display: flex;
+        position:relative;
+    }
+    .hotel_slide .content .dsc{
+        top:calc(var(--line-height)*2);
+        left: 400px;
+    }
+
+    .hotel_slide .content .dsc p{
+        font-size: 16px;
+    }
+    .bx-controls{
+        display: flex;
+        flex-direction: row-reverse;
+        gap:20px;
+    }
+   
+
 }/* 940 이하 */
 
 @media (max-width:768px){
@@ -376,6 +427,9 @@
     .left{
         width: 40%;
     }
+    .right .rb a::before{
+        display: none;
+    }
 
    
 }/* 768 이하 */
@@ -534,7 +588,13 @@
         margin:var(--line-height) 0 calc(var(--line-height)*3) 0;
     }
     .email_input input{
-        font-size: 13px;
+        font-size: 14px;
+    }
+    .s_05_newsLetter fieldset button{
+        font-size: 18px;
+    }
+    .input_wrapper p{
+        font-size: 14px;
     }
     .footer_right .contact{
         display: none;
@@ -558,15 +618,78 @@
     .logo_short .stay img{
         height: 10px;
     }
-
-    .s_01 > .text_wrapper > .lt > h2{
+/* --- SUB PAGE_hotel_seoul --- */
+    .s_01 .main_tt,.s_02 .main_tt,.s_03 .main_tt{
         font-size: 30px;
+    }
+    .s_01 > .text_wrapper > .lt > h2{
         width: 110px;
+    }
+    .s_03 .main_tt{
+        width: 250px;
+        line-height: 40px;
     }
     .lt strong{
         font-size: 16px;
     }
-  
+    .right .rb a{
+        font-size: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+    }
+    .s_02 p{
+        font-size: 14px;
+        line-height: 27px;
+        width: 540px;
+    }
+    .s_03 .bg{
+        height: 650px;
+    }
+    .s_03{
+        margin:0;
+    }
+    .s_03 .bg h2{
+        margin-top:calc(var(--line-height)*2);
+        margin-left: 50px;   
+    }
+    .bx-wrapper{
+        margin:0 auto 100px ;
+        padding-top:400px;
+        position:relative;
+    }
+
+    .hotel_slide .content img{
+        width: 250px;
+    }
+
+    .hotel_slide .content .dsc{
+        top:-200px;
+        left: 150px;
+    }
+
+    .hotel_slide .content .dsc p{
+        font-size: 14px;
+    }
+    .bx-controls{
+        gap:20px;
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+    }
+
+    .bx-pager-item{
+        line-height: 27px;
+    }
+    .bx-pager-item a{
+        width: 50px;
+        background:#fff;
+        margin-top:11px;
+    }
+
+    .bx-controls-direction{
+       display: none;
+    }
 
  
 }/* 640 이하 */

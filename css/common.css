@@ -1,6 +1,6 @@
 @import url(normalize.css);
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
@@ -9,7 +9,7 @@
     --body-fz:18px;
     --title-fz:42px;
     --line-height:27px;
-    --primary-c :#3b3530;
+    --primary-c :#534e4a;
     --secondary-c :#7f7267;
     --secondary-bg:#eeecea;
     --white : #fff;
@@ -205,6 +205,7 @@ header.dark .hamburger_btn span{
     text-transform: uppercase;
    
 }
+
 .allMenu .main_gnb>li>ul{
     display: flex;
     flex-direction: column;
@@ -212,14 +213,14 @@ header.dark .hamburger_btn span{
 }
 .allMenu .main_gnb>li>ul>li{
     font-family: var(--body-ff);
-    font-weight: 300;
+    font-weight: 200;
     font-size: 24px;
     opacity: .6;
     transition:.3s;
 }
-.allMenu .main_gnb>li>ul>li>a{
+.allMenu .main_gnb>li>ul>li.em{
     opacity: 1;
-    
+   
 }
 .allMenu .main_gnb>li>ul>li:hover{
     opacity: 1;
