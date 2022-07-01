@@ -224,6 +224,6 @@ div.text{
 .bx-controls .bx-next{
     background-image: url(../images/next_black.svg);
 }
-#hotel_slide .bx-viewport{
+.s_03 .bx-viewport{
     overflow: visible !important;
 }

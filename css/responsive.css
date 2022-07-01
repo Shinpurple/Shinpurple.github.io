@@ -638,6 +638,9 @@
         transform: translateX(-50%);
         right: 0;
     }
+    .s_02 h2{
+        width: 400px;
+    }
     .s_02 p{
         font-size: 14px;
         line-height: 27px;
@@ -683,8 +686,6 @@
     }
     .bx-pager-item a{
         width: 50px;
-        background:#fff;
-        margin-top:11px;
     }
 
     .bx-controls-direction{
