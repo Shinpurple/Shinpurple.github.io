@@ -143,29 +143,27 @@
     .s_02 p{
         font-size: 16px;
         line-height: 32px;
-        width: 700px;
     }
    
     .s_03{
         position:relative;
-        margin:calc(var(--line-height)*3) 0;
     }
     .s_03 .bg{
         width:80%;
         height:700px;
     }
     .s_03 .bg h2{
-        margin-top:calc(var(--line-height)*6);
+        margin-top:calc(var(--line-height)*5);
         margin-left: 100px;
     
     }
-    .bx-wrapper{
+    .s_03 .bx-wrapper{
         margin:0 auto 100px ;
-        padding-top:350px;
+        padding-top:400px;
     }
 
     .hotel_slide .content img{
-        width: 350px;
+        width: 300px;
         margin-left: 0;
     }
     .hotel_slide .content h2{
@@ -176,18 +174,27 @@
         position:relative;
     }
     .hotel_slide .content .dsc{
-        top:calc(var(--line-height)*2);
-        left: 400px;
+        top:-50px;
+        left: 330px;
     }
 
     .hotel_slide .content .dsc p{
         font-size: 16px;
     }
-    .bx-controls{
+    .s_03 .bx-controls{
         display: flex;
         flex-direction: row-reverse;
         gap:20px;
+        position: absolute;
+        right: 20px;
+        bottom: 32px;
     }
+
+
+    .s_03 .bx-pager-item a{
+        width: 70px;
+    }
+
    
 
 }/* 940 이하 */
@@ -638,25 +645,25 @@
         transform: translateX(-50%);
         right: 0;
     }
-    .s_02 h2{
-        width: 400px;
-    }
+
     .s_02 p{
         font-size: 14px;
         line-height: 27px;
         width: 540px;
     }
+    .s_03 {
+        margin-bottom:0;
+        height: auto;
+    }
     .s_03 .bg{
         height: 650px;
     }
-    .s_03{
-        margin:0;
-    }
+  
     .s_03 .bg h2{
         margin-top:calc(var(--line-height)*2);
         margin-left: 50px;   
     }
-    .bx-wrapper{
+    .s_03 .bx-wrapper{
         margin:0 auto 100px ;
         padding-top:400px;
         position:relative;
@@ -674,21 +681,26 @@
     .hotel_slide .content .dsc p{
         font-size: 14px;
     }
-    .bx-controls{
+    .s_03 .bx-controls{
         gap:20px;
-        position: absolute;
         right: 20px;
         bottom: 50px;
+        z-index:123;
+    }
+    .rb a{
+        white-space: nowrap;
     }
 
-    .bx-pager-item{
+    .s_03 .bx-pager-item{
         line-height: 27px;
     }
-    .bx-pager-item a{
+    .s_03 .bx-pager-item a{
         width: 50px;
+        background-color:#fff;
+        height: 3px;
     }
 
-    .bx-controls-direction{
+    .s_03 .bx-controls-direction{
        display: none;
     }
 

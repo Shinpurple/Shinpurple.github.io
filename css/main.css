@@ -129,14 +129,14 @@ body,html{
     opacity: 1;
 }
 
- /* ------ reservation ------ */
+ /* ---------------- reservation ---------------- */
 .reservation{
     background-color: var(--secondary-bg);
     position:absolute;
     bottom: 0;
     left: 0;right: 0;
     z-index: 2;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .reservation .container{
     display: flex;
@@ -151,15 +151,260 @@ body,html{
     display: flex;
     gap:50px;
 }
-.reservation .container ul li a{
+.reservation .form_menu li a{
     font-size: 24px;
     font-weight: 200;
     opacity: .7;
 }
-.reservation .container ul li:hover a{
+.reservation .form_menu li:hover a{
     font-weight: 400;
     opacity: 1;
 }
+/* ----- Reservation Form -----*/
+:root {
+    --form-fz:16px;
+    /* --form-title:24px; */
+    --form-line-height:20px;
+    --form-border: 1.5px solid #7f7267;
+}
+
+.rsv_content>*{
+    font-size: var(--form-fz);
+}
+
+ .rsv_content .form_content{
+    position:absolute;
+    background-color:rgb(255, 255, 255,.9);
+    /* width: 100%; */
+    height: 80vh;
+    bottom:10vh;
+    right: 0;left: 0; 
+    padding: 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform:translateY(100%);
+    transition:.5s;
+    z-index: -100;
+}
+.rsv_content .form_content.up{
+    transform: none;
+    transition: .5s;
+    bottom: 0;
+}
+.form_title{
+    font-family: var(--title-ff);
+    font-size: 24px;
+    color:var(--secondary-c);
+    text-transform: uppercase;
+    line-height: calc(var(--form-line-height)*2);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: var(--form-line-height);
+}
+.hover:hover{
+    background-color: var(--secondary-c);
+    color:#fff;
+}
+/* --- ROOM --- */
+
+.rsv_content .select_hotel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+.rsv_content .select_hotel>li{
+    border:var(--form-border);
+    width: 24%;
+    line-height: calc(var(--form-line-height)*2);
+    transition: .3s;
+    font-size: 16px;
+}
+.rsv_content .select_hotel>li a{
+    display: inline-block;
+    width: 100%;
+}
+.rsv_content input[type=radio]{
+    width: 0;
+    height: 0;
+    position:absolute;
+    left: -999999px;
+}
+.rsv_content input[type=radio] +label{
+    display: inline-block;
+    width: 100%;
+    cursor:pointer;
+    position:relative;
+}
+.rsv_content input[type=radio]:checked +label{
+    background-color: var(--secondary-c);
+    color:#fff;
+    z-index:1;
+}
+/* ShillaStay-selectbox */
+.rsv_content .select{
+    position:relative;
+}
+
+.rsv_content .selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.rsv_content .selected-value{
+    display: inline-block;
+    width: 100%;
+}
+.rsv_content .selected-hotel.clicked{
+    background-color: var(--secondary-c);
+    color:#fff;
+}
+.rsv_content .selected .arrow{
+    position:absolute;
+    right:15px;
+    display: inline-block;
+    width: 27px;height: 27px;
+    background:url(../images/open.svg);
+    text-indent: -99999rem;
+    cursor: pointer;
+}
+
+.rsv_content .select-list li:hover{
+    background:rgba(127,114,103,.1);
+}
+
+.rsv_content .select-list{
+    position:absolute;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: transparent var(--secondary-c) var(--secondary-c) var(--secondary-c);
+    left: -2px;right: -2px;
+    cursor: pointer;
+    display: none;
+    background:rgba(255,255,255,.9);
+}
+
+.rsv_content .select_dining .select-list.clicked{
+    display: block;
+}
+.rsv_content .select.active .select-list{
+    display: initial;
+}
+.rsv_content .select.active .selected .arrow{
+    background:url(../images/close.svg);
+}
+/* --- DINING --- */
+
+#dining .select_hotel>li{
+    width: 32%;    
+}
+
+/* selectbox-dining */
+#dining .form_title:nth-of-type(2){
+    margin-top:var(--form-line-height);
+}
+.select_dining{
+    border:var(--form-border);
+    line-height: calc(var(--form-line-height)*2);
+}
+
+#dining_content>div{   
+    margin-top:60px;
+    display: flex;
+    gap: 80px;
+    text-align: start;
+    color:var(--primary-c);
+}
+.rsv_content .infomation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#dining_content h4{
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom:var(--form-line-height) ;
+}
+.rsv_content .infomation ul{
+    font-size: 16px;
+}
+.rsv_content .infomation ul li{
+    display: flex;
+}
+.rsv_content .infomation strong{
+    width: 90px;
+    font-weight: 600;
+}
+#dining_content>div{
+    display: none;
+}
+#dining_content>div.show{
+    display:flex;
+}
+
+
+
+/* --- MEMBERSHIP --- */
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin:calc(var(--form-line-height)*2) 0 var(--form-line-height) 0;
+}
+.card_wrapper{
+    width: 220px;
+    height: calc(var(--form-line-height)*6);
+    border-radius: 7px;
+}
+.card_wrapper h4{
+    margin:auto;
+    color:#fff;
+    text-transform: uppercase;
+    line-height: calc(var(--form-line-height)*6);
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 1px 1px 8px rgba(141,141,141,0.6);
+    letter-spacing: 2px;
+}
+.brown .card_wrapper{
+    background-image: linear-gradient( to bottom, #8b7e72 0%, #71665c 100%);
+}
+.silver .card_wrapper{
+    background-image: linear-gradient( to bottom, #dbd5ce 0%, #c3bdb8 100%);
+}
+.gold .card_wrapper{
+    background-image: linear-gradient( to bottom, #cfbb8c 0%, #ae9e79 100%);
+}
+.diamond .card_wrapper{
+    background-image: linear-gradient( to bottom, #625951 0%, #3f3834 100%);
+}
+.dsc{
+    font-size: 14px;
+    text-align: left;
+    margin-top:10px;
+}
+#membership .form_content p{
+    font-weight: 500;
+    margin-top:calc(var(--form-line-height)*2);
+    font-size: 18px;
+    line-height: 36px;
+}
+.rsv_content .link_btn {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    margin-top:calc(var(--form-line-height)*2);
+}
+.rsv_content .link_btn li{
+    line-height: calc(var(--form-line-height)*2);
+    font-weight: 400;
+    font-size: 16px;
+    border:var(--form-border);
+    width: 330px;
+    transition: .3s;
+}
+
 
 
 

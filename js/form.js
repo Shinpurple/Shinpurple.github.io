@@ -64,7 +64,10 @@ var dateFormat = "mm/dd/yy",
       from = $( "#from" ).datepicker({
           defaultDate: "+1w",
           changeMonth: true,
-          numberOfMonths: 3
+          numberOfMonths: 2,
+          selectOtherMonths:false,
+          dayNames:['M','T','W','T','F','S','S'],
+          monthNamesShort:['1','2','3','4','5','6','7','8','9','10','11','12']
         })
         .on( "change", function() {
           to.datepicker( "option", "minDate", getDate( this ) );
@@ -72,7 +75,7 @@ var dateFormat = "mm/dd/yy",
       to = $( "#to" ).datepicker({
         defaultDate: "+1w",
         changeMonth: true,
-        numberOfMonths: 3
+        numberOfMonths: 2
       })
       .on( "change", function() {
         from.datepicker( "option", "maxDate", getDate( this ) );
