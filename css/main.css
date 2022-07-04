@@ -347,7 +347,7 @@ body,html{
 
 
 
-/* --- MEMBERSHIP --- */
+/* --- REWARDS --- */
 .card{
     display: flex;
     justify-content: space-between;
@@ -384,7 +384,7 @@ body,html{
     text-align: left;
     margin-top:10px;
 }
-#membership .form_content p{
+#rewards .form_content p{
     font-weight: 500;
     margin-top:calc(var(--form-line-height)*2);
     font-size: 18px;
