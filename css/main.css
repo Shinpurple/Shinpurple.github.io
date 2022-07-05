@@ -74,6 +74,7 @@ body,html{
  /* ------ controls ------ */
 main>.section{
     overflow: hidden;
+    z-index: 100;
 }
 .s_01_main .bx-controls-direction a{
     position:absolute;
@@ -336,6 +337,9 @@ main>.section{
     gap: 80px;
     text-align: start;
     color:var(--primary-c);
+    position: absolute;
+    top: 40%;
+    
 }
 .rsv_content .infomation{
     display: flex;
@@ -358,10 +362,10 @@ main>.section{
     font-weight: 600;
 }
 #dining_content>div{
-    display: none;
+    visibility: hidden;
 }
 #dining_content>div.show{
-    display:flex;
+   visibility: visible;
 }
 
 
@@ -428,7 +432,9 @@ main>.section{
 
 
 /* ==================== 02 MEET OUR HOTEL ==================== */
-
+.s_02_hotels{
+    background-color: #fff;
+}
 .s_02_hotels h2{
     font-size:48px;
     font-weight: 400;
@@ -534,7 +540,7 @@ main>.section{
     color:var(--primary-c);
 }
 
-#hotel_content #hotel_4{
+#hotel_content > #hotel_4{
     right: 0;
     text-align: right;
 }
