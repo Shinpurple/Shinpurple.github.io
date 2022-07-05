@@ -40,21 +40,20 @@ let selectDining = $('.select_dining .select-list li'),
     selectedDining=$('.selected-value'),
     diningContent = $('#dining_content>div');
 
-selectDining.click(function(e){
-    e.preventDefault();
-    let targetIdx = $(this).index();
-    
-    activeTab(targetIdx);
+    selectDining.click(function(e){
+      e.preventDefault();
+      let targetIdx = $(this).index();
 
-    let selectedContent = $(this).text();
-    selectedDining.text(selectedContent);
-    
+      diningContent.removeClass('show');
+      diningContent.eq(targetIdx).addClass('show');
+
+      let selectedContent = $(this).text();
+      selectedDining.text(selectedContent);
+     
   });
 
-function activeTab(num){
-  diningContent.removeClass('show');
-  diningContent.eq(num).addClass('show');
-}
+
+
 
 
 

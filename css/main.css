@@ -262,6 +262,7 @@ main>.section{
 /* ShillaStay-selectbox */
 .rsv_content .select{
     position:relative;
+    z-index: 1;
 }
 
 .rsv_content .selected{
