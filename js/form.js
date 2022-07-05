@@ -60,37 +60,21 @@ function activeTab(num){
 
 
 /* ================== datepicker ================== */
-var dateFormat = "mm/dd/yy",
-      from = $( "#from" ).datepicker({
-          defaultDate: "+1w",
-          changeMonth: true,
-          numberOfMonths: 2,
-          selectOtherMonths:false,
-          dayNames:['M','T','W','T','F','S','S'],
-          monthNamesShort:['1','2','3','4','5','6','7','8','9','10','11','12']
-        })
-        .on( "change", function() {
-          to.datepicker( "option", "minDate", getDate( this ) );
-        }),
-      to = $( "#to" ).datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 2
-      })
-      .on( "change", function() {
-        from.datepicker( "option", "maxDate", getDate( this ) );
-      });
- 
-    function getDate( element ) {
-      var date;
-      try {
-        date = $.datepicker.parseDate( dateFormat, element.value );
-      } catch( error ) {
-        date = null;
-      }
- 
-      return date;
-    }
+
+
+$('input[name="daterange"]').daterangepicker({
+  locale: {
+
+    // opens: 'left',
+    // "alwaysShowCalendars":true,
+     "daysOfWeek": ["S", "M", "T", "W", "T", "F", "S"],
+      "monthNames": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+  },
+  alwaysShowCalendars:true,
+  autoApply: true,
+ function(start, end, label) {
+  console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));}
+});
 
 
 

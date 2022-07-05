@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main_HotelShilla</title>
 
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/fullpage.min.js"></script>
     <script src="js/fullpage.extensions.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel="stylesheet" href="css/fullpage.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
     href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet"
@@ -160,276 +160,277 @@
                         </div>
                     </div>   
             </div>
+            <div class="z-wrapper">
+                <div class="reservation">
+                    <div class="container">
+                        <h2 class="main_tt">reservation</h2>
+                        <ul class="form_menu">
+                            <li><a href="#room" class="main_tt">Room</a></li>
+                            <li><a href="#dining" class="main_tt">Dining</a></li>
+                            <li><a href="#rewards" class="main_tt">Rewards</a></li>
+                        </ul>
+                    </div>
+                    <div class="rsv_content">
+                        <div id="room" class="container form_content">
+                            <h3 class="form_title">hotel</h3>
+                            <ul class="select_hotel">
+                                <li class="hover hotel_btn">
+                                    <input type="radio" id="seoul_r" name="hotel">
+                                    <label for="seoul_r">서울신라호텔</label>
+                                </li>
+                                <li class="hover hotel_btn">
+                                    <input type="radio" id="jeju_r" name="hotel">
+                                    <label for="jeju_r">제주신라호텔</label>
+                                </li>
+                                <li class="hover hotel_btn">
+                                    <input type="radio" id="monogram" name="hotel">
+                                    <label for="monogram">신라모노그램</label>
+                                </li>
+                                <li>
+                                    <div class="select">
+                                        <div class="selected">
+                                          <a href="#" class="selected-hotel">신라스테이</a>
+                                          <a class="arrow">open</a>
+                                        </div>
+                                        <ul class="select-list">
+                                          <li class="option"><a href="">신라스테이 광화문</a> </li>
+                                          <li class="option"><a href="">신라스테이 마포</a> </li>
+                                          <li class="option"><a href="">신라스테이 서대문</a> </li>
+                                          <li class="option"><a href="">신라스테이 역삼</a> </li>
+                                          <li class="option"><a href="">신라스테이 삼성</a> </li>
+                                          <li class="option"><a href="">신라스테이 동탄</a> </li>
+                                          <li class="option"><a href="">신라스테이 천안</a> </li>
+                                          <li class="option"><a href="">신라스테이 해운대</a> </li>
+                                        </ul>
+                                    </li>
+                            </ul>
+                            <label for="from">From</label>
+                            <input type="text" id="from" name="from">
+                            <label for="to">to</label>
+                            <input type="text" id="to" name="to">
             
-            <div class="reservation">
-                <div class="container">
-                    <h2 class="main_tt">reservation</h2>
-                    <ul class="form_menu">
-                        <li><a href="#room" class="main_tt">Room</a></li>
-                        <li><a href="#dining" class="main_tt">Dining</a></li>
-                        <li><a href="#rewards" class="main_tt">Rewards</a></li>
-                    </ul>
-                </div>
-                <div class="rsv_content">
-                    <div id="room" class="container form_content">
-                        <h3 class="form_title">hotel</h3>
-                        <ul class="select_hotel">
-                            <li class="hover hotel_btn">
-                                <input type="radio" id="seoul_r" name="hotel">
-                                <label for="seoul_r">서울신라호텔</label>
-                            </li>
-                            <li class="hover hotel_btn">
-                                <input type="radio" id="jeju_r" name="hotel">
-                                <label for="jeju_r">제주신라호텔</label>
-                            </li>
-                            <li class="hover hotel_btn">
-                                <input type="radio" id="monogram" name="hotel">
-                                <label for="monogram">신라모노그램</label>
-                            </li>
-                            <li>
-                                <div class="select">
-                                    <div class="selected">
-                                      <a href="#" class="selected-hotel">신라스테이</a>
-                                      <a class="arrow">open</a>
+                            <p>
+                                <label for="spinner">Select a value:</label>
+                                <input id="spinner" name="value">
+                            </p>
+                            
+                        </div>
+                
+                        <div id="dining" class="container form_content">
+                            <h3 class="form_title">hotel</h3>
+                            <ul class="select_hotel">
+                                <li class="hover hotel_btn">
+                                    <input type="radio" id="seoul" name="hotel">
+                                    <label for="seoul">서울신라호텔</label>
+                                </li>
+                                <li class="hover hotel_btn">
+                                    <input type="radio" id="jeju" name="hotel">
+                                    <label for="jeju">제주신라호텔</label>
+                                </li>
+                                <li>
+                                    <div class="select">
+                                        <div class="selected">
+                                          <a href="#" class="selected-hotel">신라스테이</a>
+                                          <a class="arrow">open</a>
+                                        </div>
+                                        <ul class="select-list">
+                                          <li class="option"><a href="">신라스테이 광화문</a> </li>
+                                          <li class="option"><a href="">신라스테이 마포</a> </li>
+                                          <li class="option"><a href="">신라스테이 서대문</a> </li>
+                                          <li class="option"><a href="">신라스테이 역삼</a> </li>
+                                          <li class="option"><a href="">신라스테이 삼성</a> </li>
+                                          <li class="option"><a href="">신라스테이 동탄</a> </li>
+                                          <li class="option"><a href="">신라스테이 천안</a> </li>
+                                          <li class="option"><a href="">신라스테이 해운대</a> </li>
+                                        </ul>
+                                    </div> 
+                                </li>
+                            </ul>
+                            <h3 class="form_title">dining</h3>
+                            <div class="select select_dining">
+                                <div class="selected">
+                                  <a href="#" class="selected-value">다이닝선택</a>
+                                  <a class="arrow">open</a>
+                                </div>
+                                <ul class="select-list">
+                                  <li class="opt"><a href="#dining1">콘티넨탈</a> </li>
+                                  <li class="opt"><a href="#dining2">라연</a> </li>
+                                  <li class="opt"><a href="#dining3">팔선</a> </li>
+                                </ul>
+                            </div> 
+            
+                            <div id="dining_content">
+                                <div id="dining1">
+                                    <img src="images/dining1.jpg" alt="">
+                                    <div class="infomation">
+                                        <div>
+                                            <h4>컨템포러리 프렌치 정찬 레스토랑</h4>
+                                            <p>화려한 플레이팅과 독창적인 맛의 프렌치 코스요리 및<br>
+                                                다채로운 와인 셀렉션을 경험해 보세요.
+                                            </p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <strong>위치</strong>
+                                                <p>서울신라호텔 23층</p>
+                                            </li>
+                                            <li>
+                                                <strong>운영시간</strong>
+                                                <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
+                                            </li>
+                                            <li>
+                                                <strong>문의</strong>
+                                                <p>02-2330-3369</p>
+                                            </li>
+                                        </ul>
+                                    </div>          
+                                </div>
+                                <div id="dining2">
+                                    <img src="images/dining2.jpg" alt="">
+                                    <div class="infomation">
+                                        <div>
+                                            <h4>세계최초 미쉐린 3스타 한식당 라연</h4>
+                                            <p>전통의 맛을 현대적으로 재해석하여 차려낸 <br>
+                                                최고의 한식 정찬을 경험해 보시길 바랍니다.
+                                            </p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <strong>위치</strong>
+                                                <p>서울신라호텔 23층</p>
+                                            </li>
+                                            <li>
+                                                <strong>운영시간</strong>
+                                                <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
+                                            </li>
+                                            <li>
+                                                <strong>문의</strong>
+                                                <p>02-2330-3367</p>
+                                            </li>
+                                        </ul>
+                                    </div>          
+                                </div>
+                                <div id="dining3">
+                                    <img src="images/dining3.jpg" alt="">
+                                    <div class="infomation">
+                                        <div>
+                                            <h4>중식 명가의 품격</h4>
+                                            <p>팔선의 깊은 전통과 꾸준한 명성으로 <br>
+                                                중국 본토 최고의 맛을 그대로 전해드립니다.
+                                            </p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <strong>위치</strong>
+                                                <p>서울신라호텔 23층</p>
+                                            </li>
+                                            <li>
+                                                <strong>운영시간</strong>
+                                                <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
+                                            </li>
+                                            <li>
+                                                <strong>문의</strong>
+                                                <p>02-2330-3366</p>
+                                            </li>
+                                        </ul>
+                                    </div>          
+                                </div>
+                            </div>
+                            
+                        </div> 
+                
+                        <div id="rewards" class="container form_content">
+                            <h3 class="form_title">shilla rewards</h3>
+                            <ul class="card">
+                                <li class="brown">
+                                    <div class="card_wrapper">
+                                        <h4>brown</h4>
                                     </div>
-                                    <ul class="select-list">
-                                      <li class="option"><a href="">신라스테이 광화문</a> </li>
-                                      <li class="option"><a href="">신라스테이 마포</a> </li>
-                                      <li class="option"><a href="">신라스테이 서대문</a> </li>
-                                      <li class="option"><a href="">신라스테이 역삼</a> </li>
-                                      <li class="option"><a href="">신라스테이 삼성</a> </li>
-                                      <li class="option"><a href="">신라스테이 동탄</a> </li>
-                                      <li class="option"><a href="">신라스테이 천안</a> </li>
-                                      <li class="option"><a href="">신라스테이 해운대</a> </li>
+                                    <ul class="dsc">
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                bed
+                                                </span>
+                                            객실 3%
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                restaurant
+                                                </span>
+                                            식음업장 1%
+                                        </li>
                                     </ul>
                                 </li>
-                        </ul>
-                        <label for="from">From</label>
-                        <input type="text" id="from" name="from">
-                        <label for="to">to</label>
-                        <input type="text" id="to" name="to">
-        
-                        <p>
-                            <label for="spinner">Select a value:</label>
-                            <input id="spinner" name="value">
-                        </p>
-                        
-                    </div>
-            
-                    <div id="dining" class="container form_content">
-                        <h3 class="form_title">hotel</h3>
-                        <ul class="select_hotel">
-                            <li class="hover hotel_btn">
-                                <input type="radio" id="seoul" name="hotel">
-                                <label for="seoul">서울신라호텔</label>
-                            </li>
-                            <li class="hover hotel_btn">
-                                <input type="radio" id="jeju" name="hotel">
-                                <label for="jeju">제주신라호텔</label>
-                            </li>
-                            <li>
-                                <div class="select">
-                                    <div class="selected">
-                                      <a href="#" class="selected-hotel">신라스테이</a>
-                                      <a class="arrow">open</a>
+                                <li class="silver">
+                                    <div class="card_wrapper">
+                                        <h4>silver</h4>
                                     </div>
-                                    <ul class="select-list">
-                                      <li class="option"><a href="">신라스테이 광화문</a> </li>
-                                      <li class="option"><a href="">신라스테이 마포</a> </li>
-                                      <li class="option"><a href="">신라스테이 서대문</a> </li>
-                                      <li class="option"><a href="">신라스테이 역삼</a> </li>
-                                      <li class="option"><a href="">신라스테이 삼성</a> </li>
-                                      <li class="option"><a href="">신라스테이 동탄</a> </li>
-                                      <li class="option"><a href="">신라스테이 천안</a> </li>
-                                      <li class="option"><a href="">신라스테이 해운대</a> </li>
+                                    <ul class="dsc">
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                bed
+                                                </span>
+                                            객실 3%
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                restaurant
+                                                </span>
+                                            식음업장 1%
+                                        </li>
                                     </ul>
-                                </div> 
-                            </li>
-                        </ul>
-                        <h3 class="form_title">dining</h3>
-                        <div class="select select_dining">
-                            <div class="selected">
-                              <a href="#" class="selected-value">다이닝선택</a>
-                              <a class="arrow">open</a>
-                            </div>
-                            <ul class="select-list">
-                              <li class="opt"><a href="#dining1">콘티넨탈</a> </li>
-                              <li class="opt"><a href="#dining2">라연</a> </li>
-                              <li class="opt"><a href="#dining3">팔선</a> </li>
+                                </li>
+                                <li class="gold">
+                                    <div class="card_wrapper">
+                                        <h4>gold</h4>
+                                    </div>
+                                    <ul class="dsc">
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                bed
+                                                </span>
+                                            객실 4%
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                restaurant
+                                                </span>
+                                            식음업장 1.5%
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="diamond">
+                                    <div class="card_wrapper">
+                                        <h4>diamond</h4>
+                                    </div>
+                                    <ul class="dsc">
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                bed
+                                                </span>
+                                            객실 5%
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">
+                                                restaurant
+                                                </span>
+                                            식음업장 2%
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </div> 
-        
-                        <div id="dining_content">
-                            <div id="dining1">
-                                <img src="images/dining1.jpg" alt="">
-                                <div class="infomation">
-                                    <div>
-                                        <h4>컨템포러리 프렌치 정찬 레스토랑</h4>
-                                        <p>화려한 플레이팅과 독창적인 맛의 프렌치 코스요리 및<br>
-                                            다채로운 와인 셀렉션을 경험해 보세요.
-                                        </p>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <strong>위치</strong>
-                                            <p>서울신라호텔 23층</p>
-                                        </li>
-                                        <li>
-                                            <strong>운영시간</strong>
-                                            <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
-                                        </li>
-                                        <li>
-                                            <strong>문의</strong>
-                                            <p>02-2330-3369</p>
-                                        </li>
-                                    </ul>
-                                </div>          
-                            </div>
-                            <div id="dining2">
-                                <img src="images/dining2.jpg" alt="">
-                                <div class="infomation">
-                                    <div>
-                                        <h4>세계최초 미쉐린 3스타 한식당 라연</h4>
-                                        <p>전통의 맛을 현대적으로 재해석하여 차려낸 <br>
-                                            최고의 한식 정찬을 경험해 보시길 바랍니다.
-                                        </p>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <strong>위치</strong>
-                                            <p>서울신라호텔 23층</p>
-                                        </li>
-                                        <li>
-                                            <strong>운영시간</strong>
-                                            <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
-                                        </li>
-                                        <li>
-                                            <strong>문의</strong>
-                                            <p>02-2330-3367</p>
-                                        </li>
-                                    </ul>
-                                </div>          
-                            </div>
-                            <div id="dining3">
-                                <img src="images/dining3.jpg" alt="">
-                                <div class="infomation">
-                                    <div>
-                                        <h4>중식 명가의 품격</h4>
-                                        <p>팔선의 깊은 전통과 꾸준한 명성으로 <br>
-                                            중국 본토 최고의 맛을 그대로 전해드립니다.
-                                        </p>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <strong>위치</strong>
-                                            <p>서울신라호텔 23층</p>
-                                        </li>
-                                        <li>
-                                            <strong>운영시간</strong>
-                                            <p>런치 12:00 ~ 14:30 / 디너 17:30 ~ 21:30</p>
-                                        </li>
-                                        <li>
-                                            <strong>문의</strong>
-                                            <p>02-2330-3366</p>
-                                        </li>
-                                    </ul>
-                                </div>          
-                            </div>
+                            <p>
+                                SHILLA REWARDS 포인트를 사용해 객실을 예약할 수 있습니다.<br>
+                                신라리워즈 회원만을 위한 특별한 서비스와 다양한 혜택을 경험하세요. 
+                            </p>
+                            <ul class="link_btn">
+                                <li class="hover"><a href="#">리워즈 사용하기</a></li>
+                                <li class="hover"><a href="#">프로모션/이벤트</a></li>
+                            </ul>
                         </div>
-                        
-                    </div> 
-            
-                    <div id="rewards" class="container form_content">
-                        <h3 class="form_title">shilla rewards</h3>
-                        <ul class="card">
-                            <li class="brown">
-                                <div class="card_wrapper">
-                                    <h4>brown</h4>
-                                </div>
-                                <ul class="dsc">
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            bed
-                                            </span>
-                                        객실 3%
-                                    </li>
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            restaurant
-                                            </span>
-                                        식음업장 1%
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="silver">
-                                <div class="card_wrapper">
-                                    <h4>silver</h4>
-                                </div>
-                                <ul class="dsc">
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            bed
-                                            </span>
-                                        객실 3%
-                                    </li>
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            restaurant
-                                            </span>
-                                        식음업장 1%
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="gold">
-                                <div class="card_wrapper">
-                                    <h4>gold</h4>
-                                </div>
-                                <ul class="dsc">
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            bed
-                                            </span>
-                                        객실 4%
-                                    </li>
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            restaurant
-                                            </span>
-                                        식음업장 1.5%
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="diamond">
-                                <div class="card_wrapper">
-                                    <h4>diamond</h4>
-                                </div>
-                                <ul class="dsc">
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            bed
-                                            </span>
-                                        객실 5%
-                                    </li>
-                                    <li>
-                                        <span class="material-symbols-outlined">
-                                            restaurant
-                                            </span>
-                                        식음업장 2%
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <p>
-                            SHILLA REWARDS 포인트를 사용해 객실을 예약할 수 있습니다.<br>
-                            신라리워즈 회원만을 위한 특별한 서비스와 다양한 혜택을 경험하세요. 
-                        </p>
-                        <ul class="link_btn">
-                            <li class="hover"><a href="#">리워즈 사용하기</a></li>
-                            <li class="hover"><a href="#">프로모션/이벤트</a></li>
-                        </ul>
                     </div>
-                </div>
-            </div>    
+                </div>    
+            </div>
             
         </div>
         
@@ -845,7 +846,7 @@
 
 
     </main>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+ 
     <script src="js/main.js"></script>
 </body>
 </html>

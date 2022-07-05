@@ -46,18 +46,19 @@ $('#fullpage').fullpage({
 
     /* ================== RSV_FORM ================== */
     
-      let rsvMenu = $('.form_menu a'),
+      let rsvMenu = $('.form_menu li'),
       rsvContent = $('.rsv_content>div');
 
       rsvMenu.on('click',function(e){
           e.preventDefault();
           let targetIdx = $(this).index();
-          activeTab(targetIdx);
+          
+          rsvContent.eq(targetIdx).toggleClass('up');
+          rsvContent.eq(targetIdx).siblings().removeClass('up');
+          rsvContent.eq(targetIdx).toggleClass('bold');
+          rsvContent.eq(targetIdx).siblings().removeClass('bold');
       });
-      function activeTab(num){
-        rsvContent.eq(num).toggleClass('up');
-      
-      }
+     
 
     $('.select').on('click',function(e){
         e.preventDefault();

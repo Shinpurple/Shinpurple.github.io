@@ -508,12 +508,12 @@
     .main_slide div img{
         height: 30px;
     }
-    .reservation .container{
+    .reservation >.container{
         position: relative;
         padding:15px 30px;
     }
   
-    .reservation .container h2{
+    .reservation >.container h2{
         position: absolute;
         bottom: calc(100% - 3px);
         left: 50%;
@@ -529,7 +529,7 @@
         text-align: center;
         border-radius: 3px;
     }
-    .reservation .container ul{
+    .reservation >.container ul{
         width: 100%;
         justify-content: space-between;
     }
@@ -712,6 +712,6 @@
 
 }/* 480 이하 */
 
-@media (max-width:320px){
+@media (max-width:375px){
 
 }/* 320 이하 */
