@@ -314,7 +314,7 @@ main>.section{
     background:url(../images/close.svg);
 }
 /* datepicker */
-#room .form_content > input{
+#room > input{
     /* margin:calc(var(--form-line-height)*2) 0; */
     border:var(--form-border);
     line-height: calc(var(--form-line-height)*2);
