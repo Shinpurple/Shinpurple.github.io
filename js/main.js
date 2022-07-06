@@ -55,8 +55,8 @@ $('#fullpage').fullpage({
           
           rsvContent.eq(targetIdx).toggleClass('up');
           rsvContent.eq(targetIdx).siblings().removeClass('up');
-          rsvContent.eq(targetIdx).toggleClass('bold');
-          rsvContent.eq(targetIdx).siblings().removeClass('bold');
+          rsvMenu.eq(targetIdx).toggleClass('bold');
+          rsvMenu.eq(targetIdx).siblings().removeClass('bold');
       });
      
 
@@ -89,29 +89,51 @@ $('#fullpage').fullpage({
 
 
 
-
     let selectDining = $('.select_dining .select-list li'),
-        selectedDining=$('.selected-value'),
-        diningContent = $('#dining_content>div');
+    selectedDining=$('.selected-value'),
+    diningContent = $('#dining_content>div');
 
     selectDining.click(function(e){
-        e.preventDefault();
-        let targetIdx = $(this).index();
-        
-        activeTab(targetIdx);
+      e.preventDefault();
+      let targetIdx = $(this).index();
 
-        let selectedContent = $(this).text();
-        selectedDining.text(selectedContent);
-        
-    });
+      diningContent.removeClass('show');
+      diningContent.eq(targetIdx).addClass('show');
 
-    function activeTab(num){
-    diningContent.removeClass('show');
-    diningContent.eq(num).addClass('show');
-    }
+      let selectedContent = $(this).text();
+      selectedDining.text(selectedContent);
+     
+  });
+//   selectDining.eq(0).trigger("click");
 
+/* ================== datepicker ================== */
 
 
+$('input[name="daterange"]').daterangepicker({
+    locale: {
+  
+      opens: 'center',
+      // "alwaysShowCalendars":true,
+       "daysOfWeek": ["S", "M", "T", "W", "T", "F", "S"],
+        "monthNames": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+    },
+    alwaysShowCalendars:true,
+    autoApply: true,
+   function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));}
+  });
+  
+    
+  
+  $(".add").click(function() {
+    var num = $(this).siblings('input');
+    num.val(parseInt(num.val()) + 1);
+  });
+  
+  $(".substract").click(function() {
+    var num = $(this).siblings('input');
+    num.val(parseInt(num.val()) - 1);
+  });
   
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');

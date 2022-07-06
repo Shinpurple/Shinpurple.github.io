@@ -46,6 +46,7 @@ let selectDining = $('.select_dining .select-list li'),
 
       diningContent.removeClass('show');
       diningContent.eq(targetIdx).addClass('show');
+      diningContent.eq(targetIdx).addClass('bold');
 
       let selectedContent = $(this).text();
       selectedDining.text(selectedContent);
@@ -64,7 +65,7 @@ let selectDining = $('.select_dining .select-list li'),
 $('input[name="daterange"]').daterangepicker({
   locale: {
 
-    // opens: 'left',
+    opens: 'center',
     // "alwaysShowCalendars":true,
      "daysOfWeek": ["S", "M", "T", "W", "T", "F", "S"],
       "monthNames": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
@@ -75,33 +76,16 @@ $('input[name="daterange"]').daterangepicker({
   console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));}
 });
 
+  
 
+$(".add").click(function() {
+  var num = $(this).siblings('input');
+  num.val(parseInt(num.val()) + 1);
+});
 
+$(".substract").click(function() {
+  var num = $(this).siblings('input');
+  num.val(parseInt(num.val()) - 1);
+});
 
-    var spinner = $( "#spinner" ).spinner();
- 
-    $( "#disable" ).on( "click", function() {
-      if ( spinner.spinner( "option", "disabled" ) ) {
-        spinner.spinner( "enable" );
-      } else {
-        spinner.spinner( "disable" );
-      }
-    });
-    $( "#destroy" ).on( "click", function() {
-      if ( spinner.spinner( "instance" ) ) {
-        spinner.spinner( "destroy" );
-      } else {
-        spinner.spinner();
-      }
-    });
-    $( "#getvalue" ).on( "click", function() {
-      alert( spinner.spinner( "value" ) );
-    });
-    $( "#setvalue" ).on( "click", function() {
-      spinner.spinner( "value", 5 );
-    });
- 
-    $( "button" ).button();
-
-    //
 

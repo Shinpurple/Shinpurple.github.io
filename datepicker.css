@@ -2,10 +2,10 @@
 .daterangepicker {
     position: absolute;
     color: inherit;
-    /* background-color: #fff;
+    background-color: #fff;
     border-radius: 4px;
-    border: 1px solid #ddd; */
-    width: 278px;
+    border: 1px solid #ddd;
+    width: 900px;/* 278 */
     max-width: none;
     padding: 0;
     margin-top: 7px;
@@ -90,7 +90,8 @@
   
   .daterangepicker .drp-calendar {
     display: none;
-    max-width: 270px;
+    /* max-width: 270px; */
+    max-width: 700px;
   }
   
   .daterangepicker .drp-calendar.left {
@@ -105,10 +106,10 @@
     border: none;
   }
   
-  .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+  .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {/* 화살표 */
     color: #fff;
     border: solid var(--secondary-c);
-    border-width: 0 1px 1px 0;
+    border-width: 0 2px 2px 0;
     border-radius: 0;
     display: inline-block;
     padding: 3px;
@@ -132,11 +133,12 @@
     width: 30px;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 50%;
     /* border: 1px solid transparent; */
     white-space: nowrap;
     cursor: pointer;
+    padding: 10px 15px;
   }
 
   
@@ -160,9 +162,10 @@
   
   .daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
     
-    border-color: transparent;
+    /* border-color: transparent;
     color: #999;
-    opacity: .7;
+    opacity: .3; */
+   visibility: hidden;
   }
   
   .daterangepicker td.in-range {
@@ -223,7 +226,7 @@
   }
   
   .daterangepicker td.disabled, .daterangepicker option.disabled ,
-  .table-condensed tbody>tr td:first-child.off{
+  .table-condensed tbody>tr td.off{
     color: #999;
     cursor: not-allowed;
     /* text-decoration: line-through; */
@@ -388,7 +391,7 @@
     }
   
     .daterangepicker .drp-calendar.left .calendar-table {
-      padding-right: 8px;
+      padding-right: 50px;
     }
   
     .daterangepicker .ranges, .daterangepicker .drp-calendar {

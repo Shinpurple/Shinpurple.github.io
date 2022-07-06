@@ -313,10 +313,74 @@ main>.section{
 .rsv_content .select.active .selected .arrow{
     background:url(../images/close.svg);
 }
+/* datepicker */
+#room .form_content > input{
+    /* margin:calc(var(--form-line-height)*2) 0; */
+    border:var(--form-border);
+    line-height: calc(var(--form-line-height)*2);
+    font-size: 16px;
+    background: transparent;
+    color:var(--secondary-c);
+    text-align: center;
+    letter-spacing: 1px;
+    outline-color: var(--secondary-c);
+  
+}
+/* ROOM & GUEST */
+.roomNguest{
+    border:var(--form-border);
+    line-height: calc(var(--form-line-height)*2);
+    padding:0 30px;
+}
+.roomNguest>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.roomNguest>ul>li{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.roomNguest .r_option{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+.roomNguest button.btn{
+    background:transparent;
+    border:var(--form-border);
+    color:var(--secondary-c);
+    width: 20px;height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.roomNguest  input{
+    background: transparent;
+    border:none;
+    color:var(--secondary-c);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.roomNguest .info button{
+    border:var(--form-border);
+    background: transparent;
+    color:var(--secondary-c);
+    text-align: center;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 /* --- DINING --- */
 #dining{
     justify-content: start;
-    padding-top:5%;
+    padding-top:3%;
 }
 
 #dining .select_hotel>li{

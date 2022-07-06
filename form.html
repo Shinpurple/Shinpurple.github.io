@@ -69,20 +69,60 @@
                               <li class="option"><a href="">신라스테이 천안</a> </li>
                               <li class="option"><a href="">신라스테이 해운대</a> </li>
                             </ul>
-                        </li>
+                        </div>
+                    </li>
                 </ul>
-                <!-- <label for="from">From</label>
-                <input type="text" id="from" name="from">
-                <label for="to">to</label>
-                <input type="text" id="to" name="to"> -->
-                <div id="datepicker"></div>
-
+            
+                <h3 class="form_title">check in / out</h3>
                 <input type="text" name="daterange" value="" />
 
-                <p>
-                    <label for="spinner">Select a value:</label>
-                    <input id="spinner" name="value">
-                </p>
+                <h3 class="form_title">room & guest</h3>
+                <div class="roomNguest">
+                    <ul>
+                        <li>
+                            <button class="btn add" type="button">+</button>
+                            <ul class="r_option">
+                                <li class="ctg">객실</li>
+                                <li>
+                                    <input type="number" class="num" value="1" min="1" max="5">
+                                </li>
+                            </ul>
+                            <button class="btn substract">-</button>
+                        </li>
+                        <li>
+                            <button class="btn add" type="button">+</button>
+                            <ul class="r_option">
+                                <li class="ctg">성인</li>
+                                <li>
+                                    <input type="number" class="num" value="2" min="1" max="5">
+                                </li>
+                            </ul>
+                            <button class="btn substract">-</button>
+                        </li>
+                        <li>
+                            <button class="btn add" type="button">+</button>
+                            <ul class="r_option">
+                                <li class="ctg">어린이</li>
+                                <li class="info"><button>i</button></li>
+                                <li>
+                                    <input type="number" class="num" value="0" min="0" max="5">
+                                </li>
+                            </ul>
+                            <button class="btn substract">-</button>
+                        </li>
+                        <li>
+                            <button class="btn add" type="button">+</button>
+                            <ul class="r_option">
+                                <li class="ctg">유아</li>
+                                <li class="info"><button>i</button></li>
+                                <li>
+                                    <input type="number" class="num" value="0" min="0" max="5">
+                                </li>
+                            </ul>
+                            <button class="btn substract">-</button>
+                        </li>
+                    </ul>
+                </div>
                 
             </div>
         </div>
