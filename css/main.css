@@ -353,13 +353,15 @@ main>.section{
     width: 20px;height: 20px;
     text-align: center;
     line-height: 20px;
+    cursor: pointer;
 }
 .roomNguest  input{
     background: transparent;
     border:none;
     color:var(--secondary-c);
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

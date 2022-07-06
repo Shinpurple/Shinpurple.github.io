@@ -75,7 +75,7 @@ $('#fullpage').fullpage({
         e.preventDefault();
         let selectedContent = $(this).text();
         selectedHotel.text(selectedContent);
-        $(selectedHotel).addClass('clicked');
+        selectedHotel.addClass('clicked');
         deselect();
         });
         function deselect(){
@@ -83,7 +83,7 @@ $('#fullpage').fullpage({
         }
     $('.hotel_btn').on('click',function(e){
     // $(this).addClass('clicked');
-    $(selectedHotel).removeClass('clicked');
+    selectedHotel.removeClass('clicked');
     activeTab(targetIdx);
     });
 
@@ -125,12 +125,12 @@ $('input[name="daterange"]').daterangepicker({
   
     
   
-  $(".add").click(function() {
+  $(".roomNguest .add").click(function() {
     var num = $(this).siblings('input');
     num.val(parseInt(num.val()) + 1);
   });
-  
-  $(".substract").click(function() {
+  ㅡ
+  $("roomNguest .substract").click(function() {
     var num = $(this).siblings('input');
     num.val(parseInt(num.val()) - 1);
   });
