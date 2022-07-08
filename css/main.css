@@ -745,21 +745,27 @@ input::-webkit-inner-spin-button {
 /* ==================== 03 SPECIAL OFFER ==================== */
 .s_03_offer{
     height: 100vh;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
+}
+.multiple_slide .slick-slide{
+    padding:0 10px;
 }
 
 
 .s_03_offer h2{
     padding:calc(var(--line-height)*2) 0;
 }
-.s_03_offer .multi_slide{
+.s_03_offer .multiple_slide{
     position:relative;
 }
-.multi_slide .photo{
+.multiple_slide .photo{
     position:relative;
 }
-.multi_slide .photo:before{
+.multiple_slide img{
+    width: 100%;
+}
+.multiple_slide .photo:before{
     content: '';
     position:absolute;
     left: 0;right: 0;top: 0;bottom: 0;
@@ -767,13 +773,13 @@ input::-webkit-inner-spin-button {
     opacity:0;
     transition:.3s;
 }
-.multi_slide .photo:hover:before{
+.multiple_slide .photo:hover:before{
     opacity:1;
 }
-.multi_slide .photo:hover >a{
+.multiple_slide .photo:hover >a{
     opacity:1;
 }
-.multi_slide .photo>a{
+.multiple_slide .photo>a{
     position:absolute;
     left: 50%; top: 50%;
     transform: translate(-50%,-50%);
@@ -782,28 +788,28 @@ input::-webkit-inner-spin-button {
     transition:.3s;
     z-index: 2;
 }
-.multi_slide .caption h3,
-.multi_slide .caption p,
-.multi_slide .caption span{
+.multiple_slide .caption h3,
+.multiple_slide .caption p,
+.multiple_slide .caption span{
     color:var(--primary-c);
 }
 
-.multi_slide .caption h3{
+.multiple_slide .caption h3{
     font-family: var(--title-ff);
     font-weight: 400;
     font-size: 24px;
-    line-height: calc(var(--line-height)*3);
+    margin:var(--line-height) 0;
 }
-.multi_slide .caption h3:hover{
+.multiple_slide .caption h3:hover{
     font-weight: 500;
 }
-.multi_slide .caption span{
+.multiple_slide .caption span{
     font-family: var(--title-ff);
     font-size: 16px;
     display: block;
 
 }
-.multi_slide .caption span.hotel{
+.multiple_slide .caption span.hotel{
     color:#fff;
     display: inline-block;
     line-height: 30px;
@@ -811,16 +817,16 @@ input::-webkit-inner-spin-button {
     text-align: center;
     margin-top:var(--line-height);
 }
-.multi_slide .caption span.seoul{
+.multiple_slide .caption span.seoul{
     background-color: var(--primary-c);
 }
-.multi_slide .caption span.jeju{
+.multiple_slide .caption span.jeju{
     background-color: var(--secondary-c);
 }
-.multi_slide .caption span.stay{
+.multiple_slide .caption span.stay{
     background-color: #9e9993;
 }
-.multi_slide .caption span.all{
+.multiple_slide .caption span.all{
     width:80px;
     background-color: var(--secondary-bg);
     color:var(--primary-c);
@@ -828,9 +834,10 @@ input::-webkit-inner-spin-button {
 }
 .s_03_offer .slide_wrapper{
     position:relative;
+    overflow: visible;
 }
 
-.s_03_offer .bx-controls-direction a{
+.s_03_offer .m_controls a{
     position:absolute;
     width: 74px;
     height: 74px;
@@ -838,36 +845,38 @@ input::-webkit-inner-spin-button {
     display: inline-block;
     text-indent: -999em;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     opacity: .5;
 }
 
-.s_03_offer .bx-controls .bx-prev{
+.s_03_offer .m_controls .prev{
     background-image: url(../images/prev_black.svg);
-    right: calc(100% + 50px);
+    margin-left: -650px;
 }
-.s_03_offer .bx-controls .bx-next{
+.s_03_offer .m_controls .next{
     background-image: url(../images/next_black.svg);
-    left: calc(100% + 50px);
+    margin-left: 650px;
 }
-.s_03_offer .bx-pager{
+.s_03_offer .slick-dots{
     position:absolute;
     top: -30px;
     right: 40px;  
 }
-.s_03_offer .bx-pager-item{
+.s_03_offer .slick-dots>li{
     display: inline-block;
 }
-.s_03_offer .bx-pager-item a{
+.s_03_offer .slick-dots button{
     height: 2px;
-    width: 60px; 
+    width: 80px; 
     background-color: var(--primary-c);
     display: inline-block;
     text-indent: -999em;
     opacity: .2;
     transition:.5s;
+    border:none;
 }
-.s_03_offer .bx-pager-item a.active{
+.s_03_offer .slick-active button{
     opacity: 1;
 }
 .s_03_offer .slide_wrapper > a{
@@ -876,6 +885,9 @@ input::-webkit-inner-spin-button {
     right: 0;
     font-weight: 600;
     color:var(--primary-c);
+}
+.slick-list{
+    overflow: visible;
 }
 /* ==================== 04 SHILLA REWARDS ==================== */
 .s_04_rewards{

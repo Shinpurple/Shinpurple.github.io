@@ -145,7 +145,7 @@
         font-size: 14px;
     }
 
-
+   
     .footer_top .sns{
         display: none;
         
@@ -635,6 +635,17 @@
   
     .accordion h2{
         padding: 7% 0;
+    }
+    .multiple_slide .caption h3{
+        font-size: 21px;
+    }
+    .multiple_slide .caption span{
+        font-size: 14px;
+    }
+    .multiple_slide .caption span.hotel{
+        font-size: 12px;
+        width: 120px;
+        line-height: 24px;
     }
     .s_04_rewards .container{
         padding:0 10%;
