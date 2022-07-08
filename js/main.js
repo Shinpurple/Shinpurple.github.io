@@ -38,7 +38,7 @@ $('#fullpage').fullpage({
      let depth2 = $('.allMenu .main_gnb>li>ul');
 
     depth1.click(function(e){
-        // e.preventDefault();
+        e.preventDefault();
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
     })
@@ -76,11 +76,9 @@ $('#fullpage').fullpage({
         let selectedContent = $(this).text();
         selectedHotel.text(selectedContent);
         selectedHotel.addClass('clicked');
-        deselect();
-        });
-        function deselect(){
         $("input:radio[name='hotel']").prop('checked',false);
-        }
+        });
+
     $('.hotel_btn').on('click',function(e){
     // $(this).addClass('clicked');
     selectedHotel.removeClass('clicked');
@@ -113,6 +111,7 @@ $('input[name="daterange"]').daterangepicker({
     locale: {
   
       opens: 'center',
+      drops: 'auto',
       // "alwaysShowCalendars":true,
        "daysOfWeek": ["S", "M", "T", "W", "T", "F", "S"],
         "monthNames": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
@@ -126,14 +125,19 @@ $('input[name="daterange"]').daterangepicker({
     
   
   $(".roomNguest .add").click(function() {
-    var num = $(this).siblings('input');
-    num.val(parseInt(num.val()) + 1);
+    var target = $(this).parent().find('.num');
+    var currentNum = parseInt(target.val());
+    target.val(++currentNum);  
   });
-  ㅡ
-  $("roomNguest .substract").click(function() {
-    var num = $(this).siblings('input');
-    num.val(parseInt(num.val()) - 1);
+ 
+  $(".roomNguest .substract").click(function() {
+    var target = $(this).parent().find('.num');
+    var currentNum = parseInt(target.val());
+    if(currentNum > 0){
+        target.val(--currentNum);  
+    }    
   });
+
   
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');
@@ -161,21 +165,56 @@ $('input[name="daterange"]').daterangepicker({
       }); 
 
     $(".bx-start").hide();
-    // $(document).on('click','.bx-next, .bx-prev','bx-start','bx-stop',function() {
-    //     mainSlide.stopAuto();
-    //     mainSlide.startAuto();
-    // });
+    $(document).on('click','.bx-next', '.bx-prev','bx-start','bx-stop',function() {
+        mainSlide.stopAuto();
+        mainSlide.startAuto();
+    });
 
   
     
-    $('.multi_slide').bxSlider({
-        minSlides:1,
-        maxSlides:3,
-        moveSlides:3,
-        slideWidth:420,
-        slideMargin:30,
+    // $('.multi_slide').bxSlider({
+    //     minSlides:1,
+    //     maxSlides:3,
+    //     moveSlides:3,
+    //     slideWidth:420,
+    //     slideMargin:30
         
-    });
+    // });
+    
+    $('.multiple_slide').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+
+        ]
+      });
+    
     $('.hotel_slide').bxSlider({
         // mode:'fade',
         slideWidth:900

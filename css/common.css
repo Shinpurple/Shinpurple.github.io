@@ -80,7 +80,7 @@ h1{
 
 header{
     position:fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     right: 0;  
     align-items: center;
@@ -187,7 +187,7 @@ header.dark .hamburger_btn span{
     box-shadow: inset 0px 0px 35px -5px rgba(0,0,0,0.35);
     transform: translateY(-100%);
     transition:.5s;
-    z-index: -1;
+    z-index: 10;
 }
 .allMenu.open{
     transform: none;

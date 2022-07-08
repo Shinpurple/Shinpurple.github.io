@@ -50,7 +50,18 @@ window.addEventListener('scroll',function(){
 
     $('.hamburger_btn').on('click',function(e){
         e.preventDefault();
-        $(this).toggleClass('active');
         $('.allMenu').toggleClass('open');
+        $(this).toggleClass('active'); 
+           
      });
+
+     let depth1 = $('.allMenu .main_gnb>li');
+     let depth2 = $('.allMenu .main_gnb>li>ul');
+
+    depth1.click(function(e){
+        e.preventDefault();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    })
+    depth1.eq(0).trigger("click");
 

@@ -6,6 +6,13 @@
         padding: 0 20px;
         box-sizing: border-box;
     }
+    .rsv_content .container{
+        width: 95%;
+        padding: 0 100px;
+    }
+    #dining_content>div{
+        left: 9%;
+    }
     .main_tt, .s_02_hotels h2{
         font-size:36px;
         
@@ -21,7 +28,7 @@
     .s_02_hotels h2 {
         padding: calc(var(--line-height)*2) 0;
     }
-    .reservation .container {        
+    .reservation > .container {        
         padding: var(--line-height) 20px;
     }
     header nav{
@@ -94,7 +101,24 @@
     }
 
 }/* 1320 이하 */
-
+@media (max-width:1200px) {
+    .card{
+        flex-wrap: wrap;
+        width: 470px;
+        margin:var(--form-line-height) 0;
+    }
+    .dsc{
+        flex-direction:row;
+        margin:10px 0;
+        
+    }
+    .dsc li{
+        display: inline-block;
+    }
+    .rsv_content .link_btn li{
+        width: 280px;
+    }
+}
 @media (max-width:940px){
     .allMenu .main_gnb>li{
         font-size: 24px;
@@ -102,6 +126,26 @@
     .allMenu .main_gnb>li>ul>li{
         font-size: 18px;
     }
+
+    .rsv_content .container{
+      padding:0 20px;
+    }
+    #dining_content>div{
+        gap: 30px;
+        left: 20px;
+    }
+    #dining_content>div img{
+        height: 250px;
+    }
+    #dining_content h4{
+        font-size: 18px;
+    }
+    #dining_content p,
+    .rsv_content .infomation ul{
+        font-size: 14px;
+    }
+
+
     .footer_top .sns{
         display: none;
         
@@ -194,7 +238,11 @@
     .s_03 .bx-pager-item a{
         width: 70px;
     }
-
+      /* --- SUB PAGE_login --- */
+      #login_content form p.input{
+        width: 600px;
+    }
+   
    
 
 }/* 940 이하 */
@@ -348,14 +396,39 @@
     header{
         padding:0 15px;
     }
-    .reservation .container ul{
+    .reservation >.container ul{
         gap:20px;
     }
-    .reservation .container h2{
+    .reservation >.container h2{
         font-size: 24px;
     }
-    .reservation .container ul li a{
+    .reservation >.container ul li a{
         font-size: 21px;
+    }
+    .rsv_content .form_content{
+        height: 80vh;
+        bottom:  96px;
+    }
+    
+    .rsv_content .form_content.up{
+        bottom: 96px;
+    }
+    .roomNguest{
+        padding:10px 30px;
+    }
+    .roomNguest .r_option{
+      flex-direction: column;
+      gap: 0;
+    }
+    .roomNguest .r_option>li{
+        line-height: 22px;
+    }
+    #dining_content>div{
+        gap: 30px;
+        left: 20px;
+    }
+    #dining_content>div img{
+        height: 210px;
     }
 
     .tab_wrapper{
@@ -437,7 +510,10 @@
     .right .rb a::before{
         display: none;
     }
-
+      /* --- SUB PAGE_login --- */
+    #login_content form p.input{
+        width: 450px;
+    }
    
 }/* 768 이하 */
 
@@ -685,7 +761,7 @@
         gap:20px;
         right: 20px;
         bottom: 50px;
-        z-index:123;
+        z-index:5;
     }
     .rb a{
         white-space: nowrap;
@@ -702,6 +778,25 @@
 
     .s_03 .bx-controls-direction{
        display: none;
+    }
+    .login>h2,.login>p{
+        text-align: center;
+    }
+    .login em,.login>p{
+        font-size: 16px;
+    }
+    #member >p{
+        font-size: 14px;
+    }
+    .find , .join{
+        font-size: 14px;
+    }
+    .find{
+        gap: 10px;
+    }
+    .join{
+        flex-direction: column;
+        text-align: center;
     }
 
  

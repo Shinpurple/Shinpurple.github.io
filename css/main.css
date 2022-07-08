@@ -143,6 +143,7 @@ main>.section{
     position:absolute;
     bottom: 0;
     left: 0;right: 0;
+    box-shadow: 0px 1px 8px 3px rgba(0,0,0,0.25);
     /* z-index: 1; */
 }
 .reservation .container{
@@ -200,6 +201,7 @@ main>.section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     transition:.5s;
     z-index: -10;
@@ -217,14 +219,17 @@ main>.section{
     line-height: calc(var(--form-line-height)*2);
     font-weight: 400;
     letter-spacing: 1px;
-    margin-bottom: var(--form-line-height);
+    margin: var(--form-line-height) 0;
 }
 .hover:hover{
     background-color: var(--secondary-c);
     color:#fff;
 }
 /* --- ROOM --- */
-
+#room{
+    justify-content: start;
+    padding-top:5%;
+}
 .rsv_content .select_hotel{
     display: flex;
     justify-content: space-between;
@@ -315,6 +320,7 @@ main>.section{
 }
 /* datepicker */
 #room > input{
+    width: 100%;
     /* margin:calc(var(--form-line-height)*2) 0; */
     border:var(--form-border);
     line-height: calc(var(--form-line-height)*2);
@@ -328,6 +334,7 @@ main>.section{
 }
 /* ROOM & GUEST */
 .roomNguest{
+    width: 100%;
     border:var(--form-border);
     line-height: calc(var(--form-line-height)*2);
     padding:0 30px;
@@ -352,8 +359,11 @@ main>.section{
     color:var(--secondary-c);
     width: 20px;height: 20px;
     text-align: center;
-    line-height: 20px;
+    line-height: 18px;
     cursor: pointer;
+}
+.roomNguest button.add{
+    text-indent: -2px;
 }
 .roomNguest  input{
     background: transparent;
@@ -368,7 +378,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.roomNguest .info button{
+.roomNguest button.info{
     border:var(--form-border);
     background: transparent;
     color:var(--secondary-c);
@@ -378,6 +388,7 @@ input::-webkit-inner-spin-button {
     height: 18px;
     border-radius: 50%;
     cursor: pointer;
+    margin-left: 5px;
 }
 /* --- DINING --- */
 #dining{
@@ -390,23 +401,24 @@ input::-webkit-inner-spin-button {
 }
 
 /* selectbox-dining */
-#dining .form_title:nth-of-type(2){
-    margin-top:var(--form-line-height);
-}
+
 .select_dining{
+    width: 100%;
     border:var(--form-border);
     line-height: calc(var(--form-line-height)*2);
 }
 
 #dining_content>div{   
-    margin-top:60px;
     display: flex;
     gap: 80px;
     text-align: start;
     color:var(--primary-c);
     position: absolute;
-    top: 40%;
-    
+    top: 47%;
+    left:200px;   
+}
+#dining_content>div img{
+    height: 270px;
 }
 .rsv_content .infomation{
     display: flex;
@@ -439,6 +451,7 @@ input::-webkit-inner-spin-button {
 
 /* --- REWARDS --- */
 .card{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin:calc(var(--form-line-height)*2) 0 var(--form-line-height) 0;
@@ -494,7 +507,14 @@ input::-webkit-inner-spin-button {
     width: 330px;
     transition: .3s;
 }
-
+.rsv_content .search{
+    width: 200px;
+    background-color: var(--secondary-bg);
+    border:none;
+    position:absolute;
+    bottom: 0;
+    margin:0;
+}
 
 
 
@@ -733,13 +753,13 @@ input::-webkit-inner-spin-button {
 .s_03_offer h2{
     padding:calc(var(--line-height)*2) 0;
 }
-.s_03_offer .slide{
+.s_03_offer .multi_slide{
     position:relative;
 }
-.slide .photo{
+.multi_slide .photo{
     position:relative;
 }
-.slide .photo:before{
+.multi_slide .photo:before{
     content: '';
     position:absolute;
     left: 0;right: 0;top: 0;bottom: 0;
@@ -747,13 +767,13 @@ input::-webkit-inner-spin-button {
     opacity:0;
     transition:.3s;
 }
-.slide .photo:hover:before{
+.multi_slide .photo:hover:before{
     opacity:1;
 }
-.slide .photo:hover >a{
+.multi_slide .photo:hover >a{
     opacity:1;
 }
-.slide .photo>a{
+.multi_slide .photo>a{
     position:absolute;
     left: 50%; top: 50%;
     transform: translate(-50%,-50%);
@@ -762,28 +782,28 @@ input::-webkit-inner-spin-button {
     transition:.3s;
     z-index: 2;
 }
-.slide .caption h3,
-.slide .caption p,
-.slide .caption span{
+.multi_slide .caption h3,
+.multi_slide .caption p,
+.multi_slide .caption span{
     color:var(--primary-c);
 }
 
-.slide .caption h3{
+.multi_slide .caption h3{
     font-family: var(--title-ff);
     font-weight: 400;
     font-size: 24px;
     line-height: calc(var(--line-height)*3);
 }
-.slide .caption h3:hover{
+.multi_slide .caption h3:hover{
     font-weight: 500;
 }
-.slide .caption span{
+.multi_slide .caption span{
     font-family: var(--title-ff);
     font-size: 16px;
     display: block;
 
 }
-.slide .caption span.hotel{
+.multi_slide .caption span.hotel{
     color:#fff;
     display: inline-block;
     line-height: 30px;
@@ -791,16 +811,16 @@ input::-webkit-inner-spin-button {
     text-align: center;
     margin-top:var(--line-height);
 }
-.slide .caption span.seoul{
+.multi_slide .caption span.seoul{
     background-color: var(--primary-c);
 }
-.slide .caption span.jeju{
+.multi_slide .caption span.jeju{
     background-color: var(--secondary-c);
 }
-.slide .caption span.stay{
+.multi_slide .caption span.stay{
     background-color: #9e9993;
 }
-.slide .caption span.all{
+.multi_slide .caption span.all{
     width:80px;
     background-color: var(--secondary-bg);
     color:var(--primary-c);

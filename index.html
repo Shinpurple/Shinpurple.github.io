@@ -9,25 +9,28 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="js/fullpage.min.js"></script>
     <script src="js/fullpage.extensions.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+   
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
     href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet"
     href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="css/datepicker.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/responsive.css">
+      
 
       <link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
@@ -206,11 +209,13 @@
                                           <li class="option"><a href="">신라스테이 천안</a> </li>
                                           <li class="option"><a href="">신라스테이 해운대</a> </li>
                                         </ul>
-                                    </li>
+                                    </div>
+                                </li>
                             </ul>
                            
                             <h3 class="form_title">check in / out</h3>
                             <input type="text" name="daterange" value="" />
+                            
             
                             <h3 class="form_title">room & guest</h3>
                             <div class="roomNguest">
@@ -220,7 +225,7 @@
                                         <ul class="r_option">
                                             <li class="ctg">객실</li>
                                             <li>
-                                                <input type="number" class="num" value="1" min="1" max="5">
+                                                <input type="number" readonly class="num" value="1" min="1" max="5">
                                             </li>
                                         </ul>
                                         <button class="btn substract">-</button>
@@ -230,7 +235,7 @@
                                         <ul class="r_option">
                                             <li class="ctg">성인</li>
                                             <li>
-                                                <input type="number" class="num" value="2" min="1" max="5">
+                                                <input type="number" readonly class="num" value="2" min="1" max="5">
                                             </li>
                                         </ul>
                                         <button class="btn substract">-</button>
@@ -238,10 +243,9 @@
                                     <li>
                                         <button class="btn add" type="button">+</button>
                                         <ul class="r_option">
-                                            <li class="ctg">어린이</li>
-                                            <li class="info"><button>i</button></li>
+                                            <li class="ctg">어린이<button class="info">i</button></li>
                                             <li>
-                                                <input type="number" class="num" value="0" min="0" max="5">
+                                                <input type="number" readonly class="num" value="0" min="0" max="5">
                                             </li>
                                         </ul>
                                         <button class="btn substract">-</button>
@@ -249,17 +253,16 @@
                                     <li>
                                         <button class="btn add" type="button">+</button>
                                         <ul class="r_option">
-                                            <li class="ctg">유아</li>
-                                            <li class="info"><button>i</button></li>
+                                            <li class="ctg">유아<button class="info">i</button></li>
                                             <li>
-                                                <input type="number" class="num" value="0" min="0" max="5">
+                                                <input type="number" readonly class="num" value="0" min="0" max="5">
                                             </li>
                                         </ul>
                                         <button class="btn substract">-</button>
                                     </li>
                                 </ul>
                             </div>
-                            
+                            <button class="search form_title">search</button>
                         </div>
                 
                         <div id="dining" class="container form_content">
@@ -382,7 +385,7 @@
                                     </div>          
                                 </div>
                             </div>
-                            
+                            <button class="search form_title">search</button>
                         </div> 
                 
                         <div id="rewards" class="container form_content">
@@ -680,7 +683,7 @@
                 <h2 class="main_tt">Special offer</h2>
                 <div class="slide_wrapper">
                     <a href="#" class="material-symbols-outlined">add</a>
-                    <div class="slide multi_slide">
+                    <!-- <div class="multi_slide">
                         
                             <div>
                                 <div class="photo">
@@ -769,7 +772,97 @@
                                     <span class="hotel stay">신라스테이</span>
                                 </div>
                             </div>
+                    </div> -->
+                    <div class="multiple_slide">
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_1.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3><a href="#">Gourmet Package</a></h3>
+                                <p>봄철 입맛을 돋우는 <br>
+                                    미식 결합 패키지를 소개합니다.
+                                </p>
+                                <span>2022.03.01 ~ 2022.05.31</span>
+                                <span class="hotel all">ALL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_2.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3><a href="#">Kids Friendly Vacation</a></h3>
+                                <p>
+                                    
+                                    아이는 즐겁고 어른은 더 행복해지는 <br>
+                                    KIDS 패키지를 소개합니다.
+                                 
+                                </p>
+                                <span>2022.01.01 ~ 2022.07.31</span>
+                                <span class="hotel all">ALL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_03.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3><a href="#">Rewards Smart Streaming</a></h3>
+                                <p>달콤한 프리미엄 팝콘과 함께
+                                    <br> OTT 서비스를 취향대로 골라 즐겨보세요.
+                                </p>
+                                <span>2022.01.01 ~ 2022.06.30</span>
+                                <span class="hotel all">ALL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_01.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3>Rewards Blooming Moment</h3>
+                                <p>봄의 색과 향을 담은 센터피스를 만들어보며
+                                   <br> 설렘과 행복이 피어나는 시간을 제안합니다.
+                                </p>
+                                <span>2022.04.21 ~ 2022.05.26</span>
+                                <span class="hotel seoul">서울신라호텔</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_02.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3>Member Exclusive</h3>
+                                <p>신라리워즈 회원을 위한
+                                    <br>특별한 혜택을 만나보세요.
+                                </p>
+                                <span>2022.05.01 ~ 2022.12.31</span>
+                                <span class="hotel jeju">제주신라호텔</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="images/offer_03.jpg" alt="">
+                                <a href="#" class="view_more">view more</a>
+                            </div>
+                            <div class="caption">
+                                <h3>Rewards Smart Streaming</h3>
+                                <p>달콤한 프리미엄 팝콘과 함께
+                                    <br> OTT 서비스를 취향대로 골라 즐겨보세요.
+                                </p>
+                                <span>2022.01.01 ~ 2022.06.30</span>
+                                <span class="hotel stay">신라스테이</span>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
           
@@ -812,7 +905,7 @@
                                 <input type="text" id="email_id" value="" title="email_id" placeholder="이메일 주소를 입력해주세요"> @
                                 <input type="text" id="email_domian" value="" title="email_domain">
                             </div>
-                            <button type="button" class="applyBtn">신청</button>
+                            <button type="submit" class="applyBtn">신청</button>
                         </div>
                         <p>뉴스레터 구독신청을 원하시면
                             <a href="#">여기</a>
@@ -844,7 +937,7 @@
                     </div>
                     <div class="footer_main">
                         <div class="footer_left">
-                            <img src="images/MainLogo 1.svg" alt="호텔신라 메인로고">
+                            <img src="images/MainLogo 1.svg" alt="호텔신라메인로고">
                             <div class="info">
                                 <p>(주) 호텔신라 서울특별시 중구 동호로 249 (우 : 04605) 대표이사 이부진 </p>
                                 <p>사업자등록번호 203-81-43363 통신판매신고번호 중구00272호 ) </p>
