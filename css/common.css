@@ -1,6 +1,6 @@
 @import url(normalize.css);
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@300;400;500');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
@@ -80,7 +80,7 @@ h1{
 
 header{
     position:fixed;
-    z-index: 100;
+    z-index: 10000;
     left: 0;
     right: 0;  
     align-items: center;
@@ -92,7 +92,8 @@ header{
     width: 186px;
     height: 45px;
     display: inline-block;
-    background-image: url(../images/MainLogo\ 1.svg);
+    background-image: url(../images/MainLogo.svg);
+    background-repeat: no-repeat;
     filter: drop-shadow(1px 1px 2px);
     text-indent: -999999em;
 }
@@ -187,7 +188,7 @@ header.dark .hamburger_btn span{
     box-shadow: inset 0px 0px 35px -5px rgba(0,0,0,0.35);
     transform: translateY(-100%);
     transition:.5s;
-    z-index: 10;
+    z-index: 10000;
 }
 .allMenu.open{
     transform: none;
@@ -217,6 +218,7 @@ header.dark .hamburger_btn span{
     font-size: 24px;
     opacity: .6;
     transition:.3s;
+    z-index: 9999999999999;
 }
 .allMenu .main_gnb>li>ul>li.em{
     opacity: 1;

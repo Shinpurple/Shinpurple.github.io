@@ -1,3 +1,7 @@
+
+
+/* ================== SLICK JS ================== */
+
 $('.multiple_slide').slick({
   dots: true,
   arrows:false,
@@ -181,8 +185,7 @@ hotelMenu.click(function(e){
 });
 
  
-
-
+  
 
 
 let fullpageNumber = 0;
@@ -225,14 +228,15 @@ $('#fullpage').fullpage({
      let depth2 = $('.allMenu .main_gnb>li>ul');
 
     depth1.click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
     })
     depth1.eq(0).trigger("click");
 
    
-  
+    
+
     /* ===================== BX SLIDER ===================== */
     let mainSlide =  $('.main_slide');
     mainSlide.bxSlider({
@@ -280,8 +284,8 @@ $('#fullpage').fullpage({
         // mode:'fade',
         slideWidth:900
     });
-    
-  
+
+   
 
    
 

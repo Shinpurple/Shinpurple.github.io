@@ -59,7 +59,7 @@ window.addEventListener('scroll',function(){
      let depth2 = $('.allMenu .main_gnb>li>ul');
 
     depth1.click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
     })

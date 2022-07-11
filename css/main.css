@@ -9,6 +9,114 @@ body,html{
 .fp-warning,.fp-watermark{
     display: none;
 }
+/* ==================== popup ==================== */
+.popup {
+    position: fixed;
+    left: 150px;
+    top: 150px;
+    border:1px solid #666666;
+    padding: 60px;
+    z-index: 9999999;
+    background-color: rgba(255,255,255,.95);
+    box-shadow:0px 0px 7px 3px rgba(0,0,0,0.1);
+    /* display:none; */
+}
+.popup::before{
+    content: '';
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border:2px solid var(--secondary-c);
+    opacity: .5;
+    pointer-events: none;
+}
+.popup h2{
+    font-size: 21px;
+    line-height: 34px;
+    margin-top: var(--line-height);
+}
+.popup .site_notice{
+    padding:20px 0;
+    font-size: 14px;
+}
+.popup .site_info{
+    font-size: 16px;
+    line-height: 32px;
+    border-width: 1px;
+    border-color:var(--secondary-c) transparent var(--secondary-c) transparent;
+    border-style: solid;
+    padding:20px 0;
+}
+.popup .site_info a{
+    color:#7e6548;
+    font-weight: 500;
+}
+.popup .site_info .embodied a{
+    font-weight: 700;
+}
+.popup .site_info a:hover{
+    text-decoration: underline;
+    
+}
+.popup em{
+    font-weight: 600;
+    margin-right: 5px;
+    /* color:#003668; */
+}
+.popup .close_area{
+    margin-top:20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: end;
+    gap:5px;
+}
+input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer; 
+    vertical-align: text-bottom;
+    accent-color: var(--secondary-c);
+
+}
+.popup label{
+    font-size: 16px;
+}
+.popup .p_close{
+    position:absolute;
+    top: 20px;right: 20px;
+    background-color: transparent;
+    border:none;
+    font-size: 30px;
+    cursor: pointer;
+    color:var(--secondary-c);
+    font-family: var(--title-ff);
+}
+.deco{
+    width: 100%;
+    height: 5px;
+    /* background-color: #ebebeb; */
+    position: absolute;
+    right: 0;left: 0;
+}
+.d_top{
+    top: 0;
+}
+.d_bottom{
+    bottom: 0;
+}
+.deco span{
+    height:100%;
+}
+.d_top span{
+    float: right;
+}
+.d_bottom span{
+    float: left;
+}
+
+
 /* ==================== mainSlide ==================== */
 .s_01_main{
     height: 100vh;
@@ -143,7 +251,7 @@ main>.section{
     position:absolute;
     bottom: 0;
     left: 0;right: 0;
-    box-shadow: 0px 1px 8px 3px rgba(0,0,0,0.25);
+    
     /* z-index: 1; */
 }
 .reservation .container{
@@ -190,7 +298,7 @@ main>.section{
 }
  .rsv_content .form_content{
     position:fixed;
-    background-color:rgb(255, 255, 255,.95);
+    background-color:rgb(255, 255, 255,.97);
     /* width: 100%; */
     height: 75vh;
     right: 0;left: 0; 
@@ -228,7 +336,10 @@ main>.section{
 /* --- ROOM --- */
 #room{
     justify-content: start;
-    padding-top:5%;
+    padding-top:3%;
+}
+.select_hotel_mobile{
+    display: none;
 }
 .rsv_content .select_hotel{
     display: flex;
@@ -267,7 +378,6 @@ main>.section{
 /* ShillaStay-selectbox */
 .rsv_content .select{
     position:relative;
-    z-index: 1;
 }
 
 .rsv_content .selected{
@@ -342,6 +452,7 @@ main>.section{
 .roomNguest>ul{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .roomNguest>ul>li{
     display: flex;
@@ -410,12 +521,30 @@ input::-webkit-inner-spin-button {
 
 #dining_content>div{   
     display: flex;
-    gap: 80px;
+    justify-content: space-between;
     text-align: start;
     color:var(--primary-c);
     position: absolute;
-    top: 47%;
-    left:200px;   
+    top: 47%;   
+    right: 0;left: 0;
+    width: 100%;
+    padding:0 200px;
+    z-index: -1;
+}
+#dining_content>div .d_img{
+    width: 50%;
+    height: 250px;
+    background: no-repeat center;
+}
+#dining_content>div:nth-child(1) .d_img{
+    background-image: url(../images/dining1.jpg);
+}
+#dining_content>div:nth-child(2) .d_img{
+    background-image: url(../images/dining2.jpg);
+}
+#dining_content>div:nth-child(3) .d_img{
+    background-image: url(../images/dining3.jpg);
+    background-position: right;
 }
 #dining_content>div img{
     height: 270px;
@@ -514,6 +643,10 @@ input::-webkit-inner-spin-button {
     position:absolute;
     bottom: 0;
     margin:0;
+    font-weight: 300;
+}
+.rsv_content .search:hover{
+    font-weight: 400;
 }
 
 
@@ -528,7 +661,7 @@ input::-webkit-inner-spin-button {
     letter-spacing: 1px;
 }
 .tab_wrapper{
-    height: calc(100vh - (var(--line-height)*8));
+    height: calc(100vh - (var(--line-height)*7));
     margin-top:calc(var(--line-height)*2);
     /* background-image:url(../images/hotel_seoul.jpg); */
     background-repeat: no-repeat;
@@ -743,10 +876,11 @@ input::-webkit-inner-spin-button {
 }
 
 /* ==================== 03 SPECIAL OFFER ==================== */
-.s_03_offer{
+main .s_03_offer{
     height: 100vh;
     /* display: flex;
     align-items: center; */
+    overflow: visible !important;
 }
 .multiple_slide .slick-slide{
     padding:0 10px;
@@ -758,6 +892,7 @@ input::-webkit-inner-spin-button {
 }
 .s_03_offer .multiple_slide{
     position:relative;
+    /* overflow: hidden; */
 }
 .multiple_slide .photo{
     position:relative;
@@ -798,7 +933,8 @@ input::-webkit-inner-spin-button {
     font-family: var(--title-ff);
     font-weight: 400;
     font-size: 24px;
-    margin:var(--line-height) 0;
+    margin:20px 0;
+    height: calc(var(--line-height)*2);
 }
 .multiple_slide .caption h3:hover{
     font-weight: 500;
@@ -834,29 +970,25 @@ input::-webkit-inner-spin-button {
 }
 .s_03_offer .slide_wrapper{
     position:relative;
-    overflow: visible;
+    /* overflow: visible; */
 }
 
-.s_03_offer .m_controls a{
+.s_03_offer .m_controls .material-symbols-outlined {
     position:absolute;
-    width: 74px;
-    height: 74px;
-    background:no-repeat 0 0 /100% 100%;
-    display: inline-block;
-    text-indent: -999em;
+    display: inline-block; 
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    opacity: .5;
+    transform: translateY(-50%);
+    font-size: 72px;
+    opacity: .4;
 }
 
-.s_03_offer .m_controls .prev{
-    background-image: url(../images/prev_black.svg);
-    margin-left: -650px;
+.s_03_offer .m_controls .prev .material-symbols-outlined{
+    
+    left: -100px;
 }
-.s_03_offer .m_controls .next{
-    background-image: url(../images/next_black.svg);
-    margin-left: 650px;
+.s_03_offer .m_controls .next .material-symbols-outlined{
+   
+    right: -100px;
 }
 .s_03_offer .slick-dots{
     position:absolute;
@@ -886,9 +1018,7 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     color:var(--primary-c);
 }
-.slick-list{
-    overflow: visible;
-}
+
 /* ==================== 04 SHILLA REWARDS ==================== */
 .s_04_rewards{
     background-image: url(../images/rewards_BG.jpg);

@@ -10,8 +10,14 @@
         width: 95%;
         padding: 0 100px;
     }
-    #dining_content>div{
-        left: 9%;
+    #dining_content>div{   
+        top: 47%;   
+        padding:0 100px;
+    }
+    #dining_content>div .d_img{
+        width: 50%;
+        height: 250px;
+        background: no-repeat center;
     }
     .main_tt, .s_02_hotels h2{
         font-size:36px;
@@ -104,22 +110,42 @@
 @media (max-width:1200px) {
     .card{
         flex-wrap: wrap;
-        width: 470px;
+        width: 400px;
         margin:var(--form-line-height) 0;
     }
-    .dsc{
+    .card_wrapper{
+        width: 180px;
+        height: calc(var(--form-line-height)*5);
+        border-radius: 7px;
+    }
+    .card_wrapper h4{
+        line-height: calc(var(--form-line-height)*5);
+        font-size: 14px;
+    }
+    .card .dsc{
         flex-direction:row;
-        margin:10px 0;
-        
+        margin:5px 0;
+        font-size: 12px;
     }
     .dsc li{
         display: inline-block;
     }
+    .dsc .material-symbols-outlined{
+        font-size: 17px;
+        vertical-align: middle;
+    }
     .rsv_content .link_btn li{
         width: 280px;
     }
+
 }
 @media (max-width:940px){
+    .popup {
+        left: 50%;
+        top: 150px;
+        transform: translateX(-50%);
+        width: 70%;
+    }
     .allMenu .main_gnb>li{
         font-size: 24px;
     }
@@ -131,8 +157,7 @@
       padding:0 20px;
     }
     #dining_content>div{
-        gap: 30px;
-        left: 20px;
+        padding: 0 20px;
     }
     #dining_content>div img{
         height: 250px;
@@ -142,6 +167,16 @@
     }
     #dining_content p,
     .rsv_content .infomation ul{
+        font-size: 14px;
+    }
+    .rsv_content .link_btn{
+        gap:15px;
+    }
+    .rsv_content .link_btn li{
+        font-size: 14px;
+        width: 210px;
+    }
+    #rewards >p{
         font-size: 14px;
     }
 
@@ -356,10 +391,17 @@
         width: 146px;
         height: 35px;
     }
+  
+    /* -- reservation -- */
+    .rsv_content .form_title{
+        font-size: 21px;
+    }
+    #dining_content>div .d_img{
+        width: 40%;
+    }
     .main_slide div h2{
         width: 600px;
-    }
-      
+    } 
     .s_01_main .bx-controls-direction a{
         width: 50px;
         height: 50px;
@@ -423,10 +465,7 @@
     .roomNguest .r_option>li{
         line-height: 22px;
     }
-    #dining_content>div{
-        gap: 30px;
-        left: 20px;
-    }
+ 
     #dining_content>div img{
         height: 210px;
     }
@@ -584,6 +623,8 @@
     .main_slide div img{
         height: 30px;
     }
+    /* -- reservation -- */
+
     .reservation >.container{
         position: relative;
         padding:15px 30px;
@@ -609,18 +650,99 @@
         width: 100%;
         justify-content: space-between;
     }
-    .reservation .container ul li a{
+    .reservation >.container ul li a{
         font-size: 21px;
     }
-    .reservation .container ul li:nth-child(2){
+    .reservation >.container ul li:nth-child(2){
         position:absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+    .rsv_content .form_title{
+        font-size: 18px;
+        margin: var(--form-line-height) 0 0 0;
+    }
+    .rsv_content .form_content{
+        height: 70vh;
+        bottom:  74px;
+    }
+    .rsv_content .form_content.up{
+        bottom: 160px;
+    }
+    .rsv_content .search{
+        width: 100%;
+        padding: 0 20px;
+        background-color: var(--secondary-c);
+        color:#fff;
+        position:initial;
+        margin-top:calc(var(--form-line-height)*2)
+    }
+    .rsv_content .select_hotel{
+        display: none;
+    }
+    .rsv_content .select_hotel_mobile{
+        display: block;
+        color:var(--secondary-c);
+        line-height: calc(var(--form-line-height)*3);
+        width: 100%;
+        padding:0 20px;
+        border:var(--form-border);
+        background: transparent;
+    }
+    #room > input{
+        line-height: calc(var(--form-line-height)*3);
+    }
+    .roomNguest{
+        height: calc(var(--form-line-height)*3);
+        
+    }
+    .roomNguest button{
+        display: none;
+    }
+    #room{
+        padding-top:5%;
+    }
+    #dining{
+        padding-top:15%;
+    }
+    .select_dining{
+        line-height: calc(var(--form-line-height)*3);
+    }
+    #dining_content>div.show{
+        visibility: hidden;
+     }
+     .card{
+        display: none;
+     }
+    .rsv_content > #rewards{
+        height: 65vh;
+    }
+    #rewards .form_title{
+        margin: 0 0 calc(var(--form-line-height)*2) 0;
+        font-size: 21px;
+    }
+    #rewards p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .rsv_content .link_btn {
+        flex-direction: column;
+        gap:30px;
+        margin-top:calc(var(--form-line-height)*2);
+        width: 100%;
+    }
+    .rsv_content .link_btn li{
+        line-height: calc(var(--form-line-height)*3);
+        width: 100%;
+        padding:0 20px;
+        font-size: 18px;
+        color: var(--secondary-c);
+    }
+
   
  
     .s_01_main .bx-pager{
-        bottom: 130px;
+        bottom: 120px;
     }
     .s_01_main .bx-pager-item a{
         width: 83px;
@@ -658,6 +780,8 @@
     .s_04_rewards .content >p{
         width: 400px;
         padding-bottom: var(--line-height);
+        font-size: 16px;
+        line-height: 27px;
     }
   
     .s_04_rewards .content ul{
@@ -669,6 +793,8 @@
     .s_04_rewards .content ul li{
         display: block;
         padding:var(--line-height) 0;
+        font-size: 16px;
+        line-height: 27px;
     }
     .s_04_rewards .content ul li:nth-child(2){
         border-width: 1px;
@@ -676,7 +802,7 @@
         border-color: var(--secondary-c) transparent var(--secondary-c) transparent;
     }
     .s_04_rewards h2{
-        padding: 15% 0;
+        padding: 15% 0 10% 0;
     }
     .s_04_rewards .content .view_more{
         margin:var(--line-height) 0 calc(var(--line-height)*3) 0;
