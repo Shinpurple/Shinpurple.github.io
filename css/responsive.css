@@ -294,6 +294,9 @@
     .allMenu.open{
         top:calc(var(--line-height)*3);
     }
+    .popup {
+        top: 15%;
+    }
     /* -- */
     .allMenu{
         height: calc(100vh  - (var(--line-height)*3));
@@ -414,7 +417,7 @@
         margin-left: 300px;
     }
     .main_tt, .s_02_hotels .main_tt{
-        font-size: 36px;
+        font-size: 32px;
     }
     .main_slide .content h3{
         font-size: 24px;  
@@ -568,6 +571,18 @@
     h1{
         left: 15px;
         transform: translate(0,-50%);
+    }
+    .popup{
+        width: 90%;
+    }
+    .popup h2{
+        font-size: 18px;
+    }
+    .site_notice p{
+        font-size: 12px;
+    }
+    .site_info p,.popup label{
+        font-size: 14px;
     }
     .menu .menu_right{
         display: none;
@@ -758,6 +773,9 @@
     .accordion h2{
         padding: 7% 0;
     }
+    .s_03_offer h2{
+        padding:calc(var(--line-height)*2) 0 calc(var(--line-height)*4) 0 ;
+    }
     .multiple_slide .caption h3{
         font-size: 21px;
     }
@@ -780,8 +798,8 @@
     .s_04_rewards .content >p{
         width: 400px;
         padding-bottom: var(--line-height);
-        font-size: 16px;
-        line-height: 27px;
+        /* font-size: 16px;
+        line-height: 27px; */
     }
   
     .s_04_rewards .content ul{
@@ -793,8 +811,8 @@
     .s_04_rewards .content ul li{
         display: block;
         padding:var(--line-height) 0;
-        font-size: 16px;
-        line-height: 27px;
+        /* font-size: 16px;
+        line-height: 27px; */
     }
     .s_04_rewards .content ul li:nth-child(2){
         border-width: 1px;
@@ -871,9 +889,9 @@
     .s_03 .bg{
         height: 650px;
     }
-  
+ 
     .s_03 .bg h2{
-        margin-top:calc(var(--line-height)*2);
+        margin:calc(var(--line-height)*2);
         margin-left: 50px;   
     }
     .s_03 .bx-wrapper{
