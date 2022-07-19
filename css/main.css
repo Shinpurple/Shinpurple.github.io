@@ -1080,6 +1080,9 @@ main .s_03_offer{
     background-color:var(--primary-c);
     color:#fff;
 }
+.s_05_newsLetter button{
+    border:none;
+}
 
 /* ==================== 05 NEWS LETTER ==================== */
 .s_05_newsLetter{
