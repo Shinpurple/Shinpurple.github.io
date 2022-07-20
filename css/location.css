@@ -1,0 +1,64 @@
+@import url(common.css);
+header.dark{
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+main{
+    padding-top:calc(var(--line-height)*4);
+}
+.location{
+    margin-bottom: calc(var(--line-height)*4);
+}
+.main_tt{
+    margin:calc(var(--line-height)*4) 0 var(--line-height) 0;
+}
+.seoul_info{
+    display: flex;
+    gap: 50px;
+}
+.seoul_info p:nth-child(2){
+    position: relative;
+}
+.seoul_info p:nth-child(2):before{
+    content: '';
+    width: 2px;
+    height:27px;
+    line-height: 27px;
+    background: var(--secondary-c);
+    position: absolute;
+    left: -25px;
+}
+.way> ul > li> ul{
+    display: none;
+}
+.way> ul > li> ul:first-child{
+    display: block;
+}
+.way> ul > li{
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: 500;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent var(--primary-c) transparent;   
+}
+.way> ul > li:first-child{
+    border-color: var(--primary-c) transparent var(--primary-c) transparent;  
+}
+.way> ul > li > ul{
+    line-height: var(--line-height);
+}
+.way> ul > li > ul > li{
+    margin-bottom: var(--line-height);
+}
+.way> ul > li > ul em{
+    font-size: 16px;
+    color:var(--secondary-c);
+}
+.way> ul > li > ul p{
+    font-size: 14px;
+    opacity: .7;
+    font-weight: 400;
+}
+.way img{
+    margin:calc(var(--line-height)*2) 0;
+}

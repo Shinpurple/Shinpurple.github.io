@@ -1,3 +1,17 @@
+/* ======================= ACCORDION ======================= */ 
+
+let Menu = $('.way > ul > li');
+
+
+Menu.click(function(e){
+ e.preventDefault();
+ $(this).find('ul').slideToggle();
+ $(this).siblings().find('ul').slideUp();
+});
+
+
+/* ======================= MAP API ======================= */ 
+
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(37.5562855, 127.0052953), // 지도의 중심좌표
@@ -19,3 +33,4 @@ marker.setMap(map);
 
 // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 // marker.setMap(null);    
+
