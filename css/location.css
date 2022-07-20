@@ -62,3 +62,7 @@ main{
 .way img{
     margin:calc(var(--line-height)*2) 0;
 }
+#map{
+    height: 450px;
+    margin:calc(var(--line-height)*2) 0;
+}
