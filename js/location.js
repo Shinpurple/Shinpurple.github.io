@@ -1,3 +1,28 @@
+    /* ======================== MENU ======================== */
+  
+
+    $('.hamburger_btn').on('click',function(e){
+        e.preventDefault();
+        $('.allMenu').toggleClass('open');
+        $(this).toggleClass('active'); 
+           
+        if(fullpageNumber != 0 && fullpageNumber != 3){
+            $('header').addClass('dark');
+        }else{
+            $('header').toggleClass('dark');
+        }
+     });
+
+     let depth1 = $('.allMenu .main_gnb>li');
+     let depth2 = $('.allMenu .main_gnb>li>ul');
+
+    depth1.click(function(e){
+        // e.preventDefault();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    })
+    depth1.eq(0).trigger("click");
+
 /* ======================= ACCORDION ======================= */ 
 
 let Menu = $('.way > ul > li');
@@ -36,3 +61,5 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);  
+
+

@@ -277,6 +277,10 @@
       #login_content form p.input{
         width: 600px;
     }
+      /* --- SUB PAGE_event --- */
+      .event .p_title{
+        font-size: 24px;
+      }
    
    
 
@@ -555,6 +559,12 @@
       /* --- SUB PAGE_login --- */
     #login_content form p.input{
         width: 450px;
+    }
+      /* --- SUB PAGE_event --- */
+    
+      .event>ul>li{
+        width: 100%;
+        margin-bottom: calc(var(--line-height)*3);
     }
    
 }/* 768 이하 */
@@ -953,6 +963,7 @@
         flex-direction: column;
         text-align: center;
     }
+
 
  
 }/* 640 이하 */

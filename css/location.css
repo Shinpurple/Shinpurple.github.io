@@ -40,6 +40,7 @@ main{
     border-width: 1px;
     border-style: solid;
     border-color: transparent transparent var(--primary-c) transparent;   
+    cursor: pointer;
 }
 .way> ul > li:first-child{
     border-color: var(--primary-c) transparent var(--primary-c) transparent;  
