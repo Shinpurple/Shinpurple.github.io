@@ -566,6 +566,11 @@
         width: 100%;
         margin-bottom: calc(var(--line-height)*3);
     }
+    .event .caption p.dsc,
+    .event .caption p.period{
+        font-size: 18px;
+        line-height: 27px;
+    }
    
 }/* 768 이하 */
 

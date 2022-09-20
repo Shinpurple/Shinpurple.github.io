@@ -338,8 +338,8 @@ footer{
 
 .top{
     position:fixed;
-    bottom: 100px;
-    right: 50px;
+    bottom: 50px;
+    right: 30px;
     display: inline-block;
     width: 40px;height: 40px;
     background:#fff;
@@ -347,7 +347,7 @@ footer{
     border:1px solid rgba(0,0,0,.1);
     border-radius: 50%;
     text-align: center;
-    z-index: 1000;
+    z-index: 10;
 }
 .top .material-symbols-outlined{
     line-height: 35px;

@@ -470,7 +470,7 @@ main>.section{
     color:var(--secondary-c);
     width: 20px;height: 20px;
     text-align: center;
-    line-height: 18px;
+    line-height: 10px;
     cursor: pointer;
 }
 .roomNguest button.add{
